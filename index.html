@@ -5,24 +5,14 @@
     <title>Matthew's ePortfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <a href="/index.html">Home/</a> -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="./output.css"/>
+    <link rel="stylesheet" href="./output.css" />
     <script src="https://kit.fontawesome.com/9a742d4385.js" crossorigin="anonymous"></script>
 </head>
 
-<!-- <div class="jumbotron text-center my-jumbo">
-        <h1>Matthew do Santos-Zounon</h1>
-        <small> Welcome to my ePortfolio </small>
-    </div> -->
 
-<body id="body" class="body container-fluid bg-light">
+<body id="body" class="body container-fluid  bg-gradient-dark">
     <header>
-        <nav class="navbar navbar-expand-md navbar-light  sticky-top">
+        <nav class="navbar navbar-expand-md navbar-dark sticky-top">
             <!-- <a href="#" class="navbar-brand">Matthew do Santos-Zounon</a> -->
             <button class="navbar-toggler" style="width: 100%;" data-toggle="collapse" data-target="#navbarMenu">
                 <div>
@@ -62,62 +52,85 @@
             </div>
             Matthew do Santos-Zounon
         </header> -->
-    <section id="page" role="main" data-content-feild="main-content" class="bg-light container">
-        <section id="socials" class="bg-light" >
-            <div class="container" >
-                <div class="row text-center">
-                <div class="col-12 col-md-4">
-                    <a href="https://github.com/Zounon"><button type="button" class="btn btn-git"><i class="fab fa-github pr-1"></i> Github</button></a>
+    <section id="banner-section">
+        <div id="banner" class="container">
+            <div class="col text-center">
+                <h1 id="hello">Hello!</h1>
+                <h3 class="opening-text">My name is Matthew do Santos-Zounon.</h3>
+                <h3 class="opening-text">Information Technology student at York University</h3>
+                <h3 class="opening-text"><i>passionate about building tomorrow's AGI.</i></h3>
+                <!-- <a href="imgs/codewallpaper.jpg" target="_blank"></a> -->
+            </div>
+        </div>
+    </section>
+    <section id="socials" class="bg-mine">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 col-md-3">
+                    <a href="https://github.com/Zounon"><button type="button" class="btn btn-git"><i
+                                class="fab fa-github pr-1"></i> Github</button></a>
                 </div>
 
-                <div class="col-12 col-md-4">
-                    <a href="www.linkedin.com/in/mdsz/"><button type="button" class="btn btn-li"><i class="fab fa-linkedin-in pr-1"></i> Linkedin</button></a>
+                <div class="col-12 col-md-3">
+                    <a href="www.linkedin.com/in/mdsz/"><button type="button" class="btn btn-li"><i
+                                class="fab fa-linkedin-in pr-1"></i> Linkedin</button></a>
                 </div>
 
-                <div class="col-12 col-md-4">
-                    <a href="mailto:matthewsantos314@gmail.com"><button type="button" class="btn btn-email"><i class="fas fa-envelope pr-1"></i> Email</button></a>                </div>
-                <!-- <button style='font-size:24px'>Github <i class='fab fa-github'></i></button> -->
+                <div class="col-12 col-md-3">
+                    <a href="mailto:matthewsantos314@gmail.com" id="a-social-btn"><button type="button"
+                            class="btn btn-email"><i class="fas fa-envelope pr-1"></i> Email</button></a>
+                </div>
+                <div class="col-12 col-md-3">
+                    <a href="matthewdosantoszounon.pdf" target="_blank"><button type="button" class="btn"><i class="fas fa-file-pdf"></i> Resume</button></a>
+                </div>
             </div>
-            </div>
-        </section>
 
+        </div>
+    </section>
+    <section id="page" role="main" data-content-feild="main-content" class="bg-mine container">
         <section id="bio-section">
             <!-- TODO: figure out how to bootstrap/flexbox this into a decent bio structure  -->
             <div class="container" style="margin-top:36px">
                 <div class="row align-items-center">
                     <div class="col-12 col-md-3">
                         <div class="" id="profile-picture">
-                            <img src="imgs/profile_pic.jpg"  class="rounded mx-auto d-block img-fluid"
+                            <img src="./imgs/profile_pic2.jpg" class="rounded mx-auto d-block img-fluid thumb"
                                 alt="Profile picture of Matthew.">
                         </div>
                     </div>
 
-                    <div class="col-12 col-md-9 bg-light container">
-                        <div id="bio-words" class="bg-light container">
+                    <div class="col-12 col-md-9 bg-mine container">
+                        <div id="bio-words" class="bg-mine container">
                             <!-- <b>Matthew do Santos-Zounon</b> -->
                             <br>
                             <br>
-                            <!-- <p>Student: I study Information Technology at York University. </p> -->
-                            <span class="summary-text font-weight-bold">Hello!</span>
+                            
+                            <!-- <span class="summary-text font-weight-bold">Hello!</span> -->
+
+
                             <!-- <p>Click here, to learn more about my accedmeic carrer, my related interests, and what I have planned 
                                 for the future.</p>
                             <p>Click here, to view some of the projects I am working on.</p> -->
-                            <p>If you are interested in my accademic progress, my passions, and what I have planned for my 
+
+
+                            <!-- <p>If you are interested in my accademic progress, my passions, and what I have planned for
+                                my
                                 professional carrer, <a href="./pages/aboutme.html">Click Here.</a>
                                 <br>
-                            Or, If you would like to see the small projects I build to explore my curiosity,
-                                <a href="./pages/projects.html">Click Here.</a></p>
-                            <span class="summary-text font-weight-bold">A litte about me:  </span>
-                            <p>My name is Matthew do Santos-Zounon. I am a student at York University 
-                                pursuing an honours degree in Information Technology.
-                                <br>
-                            
-                            I'm decent at python and slowly learning C, haskel and programming in general.
-                                I am interested in both the practical and theortical sides of computing.
-                                Machine Learning is my main focus.
-                            </p>
+                                Or, If you would like to see the small projects I build to explore my curiosity,
+                                <a href="./pages/projects.html">Click Here.</a></p> -->
+
+
+                            <!-- <span class="summary-text font-weight-bold">A litte about me: </span> -->
+                            <h2>About Me: </h2>
+                            <p>
+                                My name is Matthew do Santos-Zounon. 
+                                I am a student at York University, pursuing an honours degree in Information Technology.
+                                 I push myself to be better by being results-focused. 
+                                 I am always ready to learn something new or to test my knowledge with difficult problems.
+                                  My plan is to one day solve the most interesting open problem, Artificial General Intelligence. 
                             <br>
-                            <p></p>
+                                  To learn more about me <a href="./pages/aboutme.html">Click Here.</a></p>
                         </div>
                     </div>
                 </div>
@@ -151,8 +164,8 @@
                 <h1 class="display-4">Recent Projects</h1>
             </div>
             <div class="col-12 align-middle">
-                <p class="lead">I really enjoy learning the theory but, that leads me away from the practical. 
-                    So, I build small projects as a test to my knoweldge, here are a few. 
+                <p class="lead">I enjoy learning theory but, that leads me away from the practical.
+                    So, I build small projects as a test to my knoweldge, here are a few.
                 </p>
             </div>
         </div>
@@ -179,20 +192,45 @@
             </div>
             <div class="row align-items-center">
                 <div class="col-12 col-md-3">
-                    <img src="imgs/KAMI-img1.jpg" class="thumb d-block mx-auto" alt="">
+                    <img src="imgs/KAMI2-img1.png" class="thumb d-block mx-auto" alt="">
                 </div>
                 <div class="info col-12 col-md-9 align-middle">
                     <p class="">
                         <!-- <span class="summary" style="float:left;">Summary: </span>  -->
                         KAMI is a 2D puzzle game where the objective is to tile the screen with one colour.
-                        I built a python program that turns the puzzle into a graph network and then finds the optimal
+                        I built a python program that takes a graph network representation of the puzzle and then finds the optimal
                         solution.
+                        <a href="/pages/project-kami.html">Learn about grpah networks and KAMI here</a>
                     </p>
                 </div>
             </div>
         </div>
         <hr>
-        
+
+        <div class="recent-works2 container ">
+            <div class="clearfix row">
+                <div class="title text-center col-12">This Website!</div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-12 col-md-3">
+                    <img src="imgs/website-img4.jpg" class="thumb d-block mx-auto" alt="">
+                </div>
+                <div class="info col-12 col-md-9 align-middle">
+                    <!-- <p class="">Learning HTML and CSS was not so difficult. But aplying the laguages
+                        to create this website has thouhgt me a lot about the diffrence between theoretical knoweldge
+                        and practical applicaiton.
+                    </p> -->
+                    <p>
+                        This website was written from stratch using HTML and CSS with the help off Boostrap v4 and SASS. 
+                        Learning to apply code as a way to create rather than simply solve has tought me a lot.
+                        <br> 
+                        <a href="./pages/website-project.html">Learn more about the building process here. </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
         <div class="recent-works2 container ">
             <div class="clearfix row">
                 <div class="title text-center col-12">Document: iFixIt Guide</div>
@@ -203,9 +241,11 @@
                 </div>
                 <div class="info col-12 col-md-9 align-middle">
                     <p class="">
-                        The internet has a how-to for every product, but they are not all equal. 
-                        The difference between a well and poorly designed guide can be hours of 
+                        The internet has a how-to for every product, but they are not all equal.
+                        The difference between a well and poorly designed guide can be hours of
                         unnecessary frustration. Here I showcase my ability to create a great guide.
+                        <br>
+                        <a href="">Find the full guide here.</a>
                     </p>
 
                 </div>
@@ -223,8 +263,8 @@
                     <img src="imgs/MEMO-img3.jpg" class="thumb  d-block mx-auto" alt="">
                 </div>
                 <div class="info col-12 col-md-9 align-middle">
-                    <p class="">Memos are an important part of in-office communicaiton, here I showcase 
-                        my ability to write an informative and consise memo. 
+                    <p class="">Memos are an important part of in-office communicaiton, here I showcase
+                        my ability to write an informative and consise memo.
                     </p>
                 </div>
             </div>
@@ -232,23 +272,7 @@
         <hr>
 
 
-        <div class="recent-works2 container ">
-            <div class="clearfix row">
-                <div class="title text-center col-12">This Website!</div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-12 col-md-3">
-                    <img src="imgs/website-img4.jpg" class="thumb d-block mx-auto" alt="">
-                </div>
-                <div class="info col-12 col-md-9 align-middle">
-                    <p class="">Learning HTML and CSS was not so difficult. But aplying the laguages 
-                        to create this website has thouhgt me a lot about the diffrence between theoretical knoweldge
-                        and practical applicaiton. 
-                    </p>
-                </div>
-            </div>
-        </div>
-        <hr>
+
 
         <div class="recent-works2 container ">
             <div class="clearfix row">
