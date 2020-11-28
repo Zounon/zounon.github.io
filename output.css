@@ -145,8 +145,16 @@ navbar-light {
   padding-bottom: 25px;
 }
 
+#bio-words > p {
+  font-size: 1.2rem;
+}
+
 #socials {
-  margin-top: 1rem;
+  margin-top: 2rem;
+}
+
+#abme-clickhere {
+  font-size: 1.31rem;
 }
 
 .fa-github {
@@ -159,6 +167,17 @@ navbar-light {
 
 .fa-envelope {
   color: #db4437 !important;
+}
+
+.btn-small {
+  width: auto !important;
+  font-weight: 300;
+  font-size: 1rem !important;
+}
+
+.btn-mycolor {
+  border-color: #B5EAD7;
+  background: #b5ead727 linear-gradient(180deg, #0ea3c573, #128dbe50) repeat-x;
 }
 
 nav[data-toggle=toc] {
