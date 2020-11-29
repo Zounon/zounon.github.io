@@ -30,6 +30,11 @@ p {
   line-height: 1.7;
 }
 
+hr {
+  border-top: 3px double rgba(225, 225, 225, 0.3) !important;
+  width: 100%;
+}
+
 bg-light bg-mine {
   background-color: #c6cbe4;
 }
@@ -56,6 +61,11 @@ navbar-light {
   float: center;
 }
 
+.list-inline {
+  font-size: 1.4rem;
+  list-style-type: square !important;
+}
+
 #banner-section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("imgs/codebackground6.png");
   background-size: 100% 100%;
@@ -80,6 +90,9 @@ navbar-light {
   text-shadow: 3px -3px 4px black;
   text-shadow: -3px 3px 4px black;
   text-shadow: -3px -3px 4px black;
+}
+#hello #nonewline > h3 {
+  display: inline;
 }
 
 .opening-text {
@@ -130,11 +143,17 @@ navbar-light {
 }
 
 .summary-text {
-  font-style: oblique, bold;
+  font-style: oblique;
+  line-height: 3;
+  color: #B5EAD7;
 }
 
 .summary {
   line-height: 1.75;
+}
+
+.prepara {
+  margin-bottom: 2.5rem;
 }
 
 #para {
