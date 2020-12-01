@@ -156,6 +156,57 @@ navbar-light {
   margin-bottom: 2.5rem;
 }
 
+#kami_row > div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#kami_row > img {
+  min-width: 250px;
+  width: 100%;
+  max-width: 350px;
+}
+
+#kami_row > div > img {
+  min-width: 250px;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+  border-radius: 0.365rem !important;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.kami-img > img {
+  min-width: 250px;
+  width: 100%;
+  max-width: 350px;
+}
+
+#subway_img {
+  max-width: 750px !important;
+}
+
+.subtitle > h3 {
+  font-size: 2.5rem;
+  font-weight: 350;
+  line-height: 1.2;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  color: #B5EAD7;
+}
+
+.subtitle {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.paragraph > p {
+  font-size: 24px;
+}
+
 #para {
   margin-top: 25px;
 }
