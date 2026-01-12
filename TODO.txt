@@ -1,0 +1,32 @@
+Context / notes
+- Repo currently serves a hand-built Bootstrap site from root (index.html + pages/); custom domain is mdsz.ca (CNAME in repo root).
+- Images live in imgs/ (profile pics, KAMI project shots, code backgrounds); docs/ is empty now but git status shows deleted PDFs (old resume/reports).
+- GitHub Pages likely builds from the root of this user-site repo; decide whether to keep root publish or switch to docs/ or gh-pages.
+
+Hugo + Terminal migration (priority order)
+1) Scaffold Hugo
+   - Install Hugo extended locally; create a new Hugo site (e.g., site/ or root) with clean config (TOML/YAML).
+   - Add the Terminal theme (git submodule, Hugo module, or vendored copy) and enable it in the config.
+2) Configure metadata
+   - Set baseURL to https://mdsz.ca, site title/name, language, and author.
+   - Define menus (Home, Projects, About/Resume, Contact) in the config; choose single-page vs sectioned navigation.
+   - Preserve custom domain by keeping CNAME in the published output (static/CNAME or root).
+3) Content pass
+   - Write a concise landing intro/hero blurb; reuse updated headshot from imgs/ in static/.
+   - Create Projects section (content/projects) with a few current items and reuse relevant images; drop noisy backgrounds.
+   - Add About page and link to a refreshed resume PDF placed in static/resume.pdf.
+   - Add Contact/social links (GitHub, LinkedIn, email) using Terminal theme params/partials.
+4) Styling tweaks within theme settings
+   - Choose minimal accent colors and typography options offered by Terminal; keep layout sparse/clean.
+   - Turn off unused widgets/sections; verify dark/light choice matches the desired minimal look.
+5) Deploy pipeline
+   - Decide publishing target: commit generated public/ to root/docs or deploy to gh-pages via GitHub Actions (peaceiris/actions-hugo or hugo --minify -> pages upload).
+   - Ensure the CNAME is included in the published artifact; test `hugo server -D` locally, then `hugo --minify` for production.
+6) Cleanup & docs
+   - Remove legacy HTML/CSS once the Hugo site is live.
+   - Add README with build/run/deploy steps; update .gitignore for Hugo build artifacts (public/, resources/).
+
+Questions to settle
+- Prefer single-page flow vs separate sections?
+- Which projects to highlight (and are the current imgs/ still relevant)?
+- Provide a new resume PDF? (old one is missing)  

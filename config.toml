@@ -1,0 +1,55 @@
+baseURL = "https://mdsz.ca/"
+languageCode = "en-us"
+title = "Matthew do Santos-Zounon"
+theme = "terminal"
+publishDir = "docs"
+
+[pagination]
+  pagerSize = 5
+enableRobotsTXT = true
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    noClasses = false
+
+[params]
+  contentTypeName = "projects"
+  showMenuItems = 4
+  showLanguageSelector = false
+  fullWidthTheme = false
+  centerTheme = true
+  readMore = "Open"
+  readOtherPosts = "More projects"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    title = "Matthew do Santos-Zounon"
+    subtitle = "Software engineer + student"
+    menuMore = "More"
+    readMore = "Read"
+    readOtherPosts = "More projects"
+
+    [languages.en.params.logo]
+      logoText = "mdsz"
+      logoHomeLink = "/"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "projects"
+        name = "Projects"
+        url = "/projects/"
+        weight = 1
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about/"
+        weight = 2
+      [[languages.en.menu.main]]
+        identifier = "contact"
+        name = "Contact"
+        url = "mailto:matthewsantos314@gmail.com"
+        weight = 3

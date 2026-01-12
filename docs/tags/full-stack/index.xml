@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Full-Stack on Matthew do Santos-Zounon</title><link>https://mdsz.ca/tags/full-stack/</link><description>Recent content in Full-Stack on Matthew do Santos-Zounon</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 01 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mdsz.ca/tags/full-stack/index.xml" rel="self" type="application/rss+xml"/><item><title>KAMI</title><link>https://mdsz.ca/projects/kami/</link><pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate><guid>https://mdsz.ca/projects/kami/</guid><description>&lt;p&gt;Built a minimalist note + task workspace focused on speed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Designed a pared-down UI with keyboard-first navigation.&lt;/li&gt;
+&lt;li&gt;Implemented syncing and local caching to stay responsive offline.&lt;/li&gt;
+&lt;li&gt;Added quick capture and search so everything stays one keystroke away.&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
