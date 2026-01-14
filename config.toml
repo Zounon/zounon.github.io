@@ -16,7 +16,7 @@ enableRobotsTXT = true
 
 [params]
   contentTypeName = "projects"
-  showMenuItems = 4
+  showMenuItems = 0
   showLanguageSelector = false
   fullWidthTheme = false
   centerTheme = true
@@ -34,7 +34,7 @@ enableRobotsTXT = true
     readOtherPosts = "More projects"
 
     [languages.en.params.logo]
-      logoText = "mdsz"
+      logoText = "Matt dSZ"
       logoHomeLink = "/"
 
     [languages.en.menu]
@@ -45,11 +45,37 @@ enableRobotsTXT = true
         weight = 1
       [[languages.en.menu.main]]
         identifier = "about"
-        name = "About"
+        name = "About Me"
         url = "/about/"
         weight = 2
       [[languages.en.menu.main]]
-        identifier = "contact"
-        name = "Contact"
+        identifier = "resume"
+        name = "Resume"
+        url = "/do_santos_zounon_resume.pdf"
+        weight = 10
+        [languages.en.menu.main.params]
+          align = "right"
+          newtab = true
+      [[languages.en.menu.main]]
+        identifier = "github"
+        name = "GitHub"
+        url = "https://github.com/Zounon"
+        weight = 11
+        [languages.en.menu.main.params]
+          align = "right"
+          newtab = true
+      [[languages.en.menu.main]]
+        identifier = "linkedin"
+        name = "LinkedIn"
+        url = "https://www.linkedin.com/in/mdsz/"
+        weight = 12
+        [languages.en.menu.main.params]
+          align = "right"
+          newtab = true
+      [[languages.en.menu.main]]
+        identifier = "email"
+        name = "Email"
         url = "mailto:matthewsantos314@gmail.com"
-        weight = 3
+        weight = 13
+        [languages.en.menu.main.params]
+          align = "right"

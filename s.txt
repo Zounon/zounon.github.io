@@ -1,0 +1,2 @@
+ """ Hi! I'm Matt. I've lead app releases @ Rvian;
+  built automated E2E test in CI/CD @ Operto; found security vulnerabilities through frimware emulation @ Gatekeeper; lead devs in building autonomous software as the Team Lead @ SFU's Robotics Club. """

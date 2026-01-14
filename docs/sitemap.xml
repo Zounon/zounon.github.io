@@ -1,1 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://mdsz.ca/tags/hugo/</loc><lastmod>2024-03-05T00:00:00+00:00</lastmod></url><url><loc>https://mdsz.ca/</loc><lastmod>2024-03-05T00:00:00+00:00</lastmod></url><url><loc>https://mdsz.ca/projects/portfolio-refresh/</loc><lastmod>2024-03-05T00:00:00+00:00</lastmod></url><url><loc>https://mdsz.ca/projects/</loc><lastmod>2024-03-05T00:00:00+00:00</lastmod></url><url><loc>https://mdsz.ca/tags/</loc><lastmod>2024-03-05T00:00:00+00:00</lastmod></url><url><loc>https://mdsz.ca/tags/web/</loc><lastmod>2024-03-05T00:00:00+00:00</lastmod></url><url><loc>https://mdsz.ca/tags/full-stack/</loc><lastmod>2023-10-01T00:00:00+00:00</lastmod></url><url><loc>https://mdsz.ca/projects/kami/</loc><lastmod>2023-10-01T00:00:00+00:00</lastmod></url><url><loc>https://mdsz.ca/tags/productivity/</loc><lastmod>2023-10-01T00:00:00+00:00</lastmod></url><url><loc>https://mdsz.ca/projects/ifixit/</loc><lastmod>2022-06-15T00:00:00+00:00</lastmod></url><url><loc>https://mdsz.ca/tags/hardware/</loc><lastmod>2022-06-15T00:00:00+00:00</lastmod></url><url><loc>https://mdsz.ca/tags/writing/</loc><lastmod>2022-06-15T00:00:00+00:00</lastmod></url><url><loc>https://mdsz.ca/about/</loc></url><url><loc>https://mdsz.ca/categories/</loc></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/tags/hugo/</loc>
+    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/projects/portfolio-refresh/</loc>
+    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/projects/</loc>
+    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/web/</loc>
+    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/full-stack/</loc>
+    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/projects/kami/</loc>
+    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/productivity/</loc>
+    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/projects/ifixit/</loc>
+    <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/hardware/</loc>
+    <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/writing/</loc>
+    <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url>
+</urlset>
