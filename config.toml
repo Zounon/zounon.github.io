@@ -15,13 +15,11 @@ enableRobotsTXT = true
     noClasses = false
 
 [params]
-  contentTypeName = "projects"
   showMenuItems = 0
   showLanguageSelector = false
   fullWidthTheme = false
   centerTheme = true
   readMore = "Open"
-  readOtherPosts = "More projects"
 
 [languages]
   [languages.en]
@@ -31,23 +29,12 @@ enableRobotsTXT = true
     subtitle = "Software engineer + student"
     menuMore = "More"
     readMore = "Read"
-    readOtherPosts = "More projects"
 
     [languages.en.params.logo]
       logoText = "Matt dSZ"
       logoHomeLink = "/"
 
     [languages.en.menu]
-      [[languages.en.menu.main]]
-        identifier = "projects"
-        name = "Projects"
-        url = "/projects/"
-        weight = 1
-      [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About Me"
-        url = "/about/"
-        weight = 2
       [[languages.en.menu.main]]
         identifier = "resume"
         name = "Resume"

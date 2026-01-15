@@ -6,35 +6,6 @@
     <description>Recent content on Matthew do Santos-Zounon</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Minimal Terminal Portfolio</title>
-      <link>http://localhost:1313/projects/portfolio-refresh/</link>
-      <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/portfolio-refresh/</guid>
-      <description>&lt;p&gt;Rebuilt this site around a lean Hugo + Terminal stack:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Simplified navigation to the essentials (Projects, About, Contact).&lt;/li&gt;&#xA;&lt;li&gt;Kept the footprint light while keeping the CNAME and GitHub Pages flow intact.&lt;/li&gt;&#xA;&lt;li&gt;Wrote content-first sections to replace the old Bootstrap build.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>KAMI</title>
-      <link>http://localhost:1313/projects/kami/</link>
-      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/kami/</guid>
-      <description>&lt;p&gt;Built a minimalist note + task workspace focused on speed:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Designed a pared-down UI with keyboard-first navigation.&lt;/li&gt;&#xA;&lt;li&gt;Implemented syncing and local caching to stay responsive offline.&lt;/li&gt;&#xA;&lt;li&gt;Added quick capture and search so everything stays one keystroke away.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>Device Repair Guides</title>
-      <link>http://localhost:1313/projects/ifixit/</link>
-      <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/ifixit/</guid>
-      <description>&lt;p&gt;Created concise repair guides that pair photos with step-by-step instructions:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Broke complex repairs into clear, verifiable steps.&lt;/li&gt;&#xA;&lt;li&gt;Shot and edited process photos to match each step.&lt;/li&gt;&#xA;&lt;li&gt;Published to help classmates and friends revive their hardware instead of replacing it.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m a Computer Science student at Simon Fraser University who likes turning ideas into reliable software. I bias for clarity, concise solutions, and fast feedback loops.&lt;/p&gt;&#xA;&lt;p&gt;Things I enjoy:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Building small, focused tools that solve real problems.&lt;/li&gt;&#xA;&lt;li&gt;Working close to users and iterating quickly.&lt;/li&gt;&#xA;&lt;li&gt;Learning by shipping, reading code, and asking good questions.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;If you&amp;rsquo;d like to collaborate or chat, reach me at &lt;a href=&#34;mailto:matthewsantos314@gmail.com&#34;&gt;matthewsantos314@gmail.com&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>
