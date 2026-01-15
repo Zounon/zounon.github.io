@@ -13,15 +13,15 @@ draft = false
 <div style="display:flex; gap:24px; align-items:center; flex-wrap:wrap;">
   <img src="/profile_picture.jpg" alt="Matthew do Santos-Zounon" style="max-width: 180px; border-width: 2px; border-style: solid; flex-shrink:0;">
   <div style="flex:1; min-width:260px;">
-    <p style="margin:0 0 6px;">Hi! I'm Matt.</p>
+    <p style="margin:0 0 6px;">Hi! I'm Matt, here's some of the work I've done:</p>
     <div class="experience-grid">
-      <a class="experience-card" href="#">Led mobile app releases @ Rivian | VW, shipping reliable updates at scale.</a>
-      <a class="experience-card" href="#">Designed and led automated E2E testing in CI/CD, cutting manual test time by 62%.</a>
-      <a class="experience-card" href="#">Built QA tooling that accelerated bug discovery and diagnosis, and performed firmware analysis to uncover security issues @ Gatekeeper.</a>
-      <a class="experience-card" href="#">Built and led a student dev team, designed the autonomous driving architecture, and delivered software with an emulated test environment.</a>
+      <a class="experience-card" href="#">Lead a mobile release + built tooling for QA team <br><span class="experience-company">@ Rivian | VW</span></a>
+      <a class="experience-card" href="#">Built CI/CD E2E tests cutting manual testing 62% <br><span class="experience-company">@ Operto</span></a>
+      <a class="experience-card" href="#">Built QA tooling + firmware security analysis <br><span class="experience-company">@ Gatekeeper</span></a>
+      <a class="experience-card" href="#">Lead student team in building autonomous robots <br> <span class="experience-company">@ SFU Robotics</span></a>
     </div>
   </div>
 </div>
 
+<p style="margin:18px 0 0;">also, I'm looking for places to rock climb in the GTA. If you need a belay or know a great spot to climb I'd love to chat!</p>
 
-Below are a few recent projects.
