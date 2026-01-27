@@ -15,6 +15,7 @@ enableRobotsTXT = true
     noClasses = false
 
 [params]
+  contentTypeName = "experience"
   showMenuItems = 0
   showLanguageSelector = false
   fullWidthTheme = false

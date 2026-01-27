@@ -1,0 +1,20 @@
+Industry Experience Notes (from resume)
+
+Rivian — Rivian and Volkswagen Group Technologies
+Software Integration Engineer | Sep 2024 – Apr 2025 | Vancouver, BC
+- Led sub-team of 4 to ship mobile release v2.21, aligning PM, Design, & Devs through complete release cycle.
+- Developed automated UI and API tests using Python’s PyTest and Appium integrated with GitHub Actions to run on simulated and test-bench vehicles.
+- Discovered bugs and developed tests for Android using Android Studio SDK (Java & Kotlin) and for iOS using XCode (Swift).
+- Mentored junior interns teaching test processes, development skills, and automation fundamentals.
+
+Operto Guest Technologies
+Quality Assurance Engineer | May 2023 – Dec 2023 | Vancouver, BC
+- Developed and deployed 200 E2E UI test case suite in TypeScript using Playwright, covering new features and 85% of the most common user flows identified through FullStory.
+- Enabled fast feature iteration by incorporating automated test suite into CI/CD pipeline.
+- Led cross-team bug triage aligning on severity and ownership, removing blockers for more efficient feature release.
+
+Gatekeeper Systems Inc.
+Software Systems Engineer | May 2022 – Dec 2022 | Abbotsford, BC
+- Automated 150 manual test cases by reverse engineering HTTPS protocol from PCAPs (Wireshark, tcpdump) and developing a Python scapy tool to emulate device traffic, eliminating the need for physical hardware.
+- Performed static and dynamic firmware analysis on embedded MIPS Linux by extracting images with binwalk, analyzing with radare2, Ghidra, and demonstrated PoC user-space emulation with QEMU.
+- Developed concurrent network and log analysis tool that reports anomalous device behavior; now standard in QA toolkit.
