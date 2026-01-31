@@ -1,5 +1,5 @@
 +++
-title = "Internship @ Rivian|VW"
+title = "Dev Tooling & Leadership @ Rivian|VW"
 date = 2025-04-01
 start = "09-2024"
 end = "04-2025"

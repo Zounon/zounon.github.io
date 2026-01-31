@@ -1,10 +1,11 @@
 +++
-title = "Operto: CI/CD E2E Automation"
+title = "Test automation & CI/CD integration @ Operto"
 date = 2023-12-01
 start = "05-2023"
 end = "12-2023"
-description = "Built a 200-test Playwright suite and wired it into CI/CD to speed feature delivery."
-tags = ["e2e", "testing", "qa"]
+description = """
+When manual testing was cutting deep into Dev time, myself and my co-intern proposed an automated test suite. Together we developed ~200 E2E test cases using TypeScript/PlayWright. By integrating select tests to run as a Git pull-hook, and others to run overnight; we successfuly reduced manual testing time by over 62%.
+"""
 +++
 
 Role: Quality Assurance Engineer  
