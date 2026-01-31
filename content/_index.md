@@ -18,9 +18,11 @@ draft = false
       <a class="experience-card" href="/experience/rivian-mobile-release/">Lead a mobile release + built tooling for QA team <br><span class="experience-company">@ Rivian | VW</span></a>
       <a class="experience-card" href="/experience/operto-e2e-automation/">Built CI/CD E2E tests cutting manual testing 62% <br><span class="experience-company">@ Operto</span></a>
       <a class="experience-card" href="/experience/gatekeeper-firmware-analysis/">Built QA tooling + firmware security analysis <br><span class="experience-company">@ Gatekeeper</span></a>
-      <a class="experience-card" href="#">Lead student team in building autonomous robots <br> <span class="experience-company">@ SFU Robotics</span></a>
+      <a class="experience-card" href="/experience/sfu-robotics/">Lead student team in building autonomous robots <br> <span class="experience-company">@ SFU Robotics</span></a>
     </div>
   </div>
 </div>
+
+<!-- <p style="margin:18px 0 0;">Click on my experince above to learn more or see the projects I've been diving into below.</p> -->
 
 <p style="margin:18px 0 0;">also, I'm looking for places to rock climb in the GTA. If you need a belay or know a great spot to climb I'd love to chat!</p>

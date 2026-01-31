@@ -1,6 +1,8 @@
 +++
 title = "Gatekeeper: Firmware Analysis and QA Tooling"
 date = 2022-12-01
+start = "05-2022"
+end = "12-2022"
 description = "Replaced manual tests with protocol emulation and added firmware analysis workflows."
 tags = ["firmware", "security", "qa"]
 +++

@@ -1,6 +1,8 @@
 +++
 title = "Operto: CI/CD E2E Automation"
 date = 2023-12-01
+start = "05-2023"
+end = "12-2023"
 description = "Built a 200-test Playwright suite and wired it into CI/CD to speed feature delivery."
 tags = ["e2e", "testing", "qa"]
 +++

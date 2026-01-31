@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Qa on Matthew do Santos-Zounon</title>
+    <link>http://localhost:1313/tags/qa/</link>
+    <description>Recent content in Qa on Matthew do Santos-Zounon</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/qa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Operto: CI/CD E2E Automation</title>
+      <link>http://localhost:1313/experience/operto-e2e-automation/</link>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/experience/operto-e2e-automation/</guid>
+      <description>&lt;p&gt;Role: Quality Assurance Engineer&lt;br&gt;&#xA;Location: Vancouver, BC&lt;br&gt;&#xA;Team: Operto Guest Technologies&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Focused on building a reliable E2E suite that matched the most common user flows so feature releases could ship faster without manual regression cycles.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-i-shipped&#34;&gt;What I shipped&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Authored 200 Playwright tests in TypeScript covering new features and 85% of top user flows.&lt;/li&gt;&#xA;&lt;li&gt;Integrated the suite into CI/CD to provide fast feedback for engineers.&lt;/li&gt;&#xA;&lt;li&gt;Led cross-team triage to align on severity and ownership.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;impact&#34;&gt;Impact&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Significantly reduced manual testing load and shortened release feedback loops.&lt;/li&gt;&#xA;&lt;li&gt;Clearer bug ownership improved release predictability.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;&#xA;&lt;p&gt;TypeScript, Playwright, CI/CD, FullStory&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Gatekeeper: Firmware Analysis and QA Tooling</title>
+      <link>http://localhost:1313/experience/gatekeeper-firmware-analysis/</link>
+      <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/experience/gatekeeper-firmware-analysis/</guid>
+      <description>&lt;p&gt;Role: Software Systems Engineer&lt;br&gt;&#xA;Location: Abbotsford, BC&lt;br&gt;&#xA;Team: Gatekeeper Systems Inc.&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Built tooling to eliminate manual testing bottlenecks while also hardening the QA workflow with firmware analysis and anomaly detection.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-i-shipped&#34;&gt;What I shipped&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Automated 150 manual tests by emulating HTTPS device traffic using scapy.&lt;/li&gt;&#xA;&lt;li&gt;Reconstructed firmware images with binwalk and analyzed behavior with radare2 and Ghidra.&lt;/li&gt;&#xA;&lt;li&gt;Prototyped user-space emulation with QEMU to validate findings.&lt;/li&gt;&#xA;&lt;li&gt;Delivered a concurrent network/log anomaly tool now standard in the QA toolkit.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;impact&#34;&gt;Impact&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Removed the dependency on physical hardware for core regression tests.&lt;/li&gt;&#xA;&lt;li&gt;Improved visibility into device behavior and potential security issues.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;&#xA;&lt;p&gt;Python, scapy, Wireshark, tcpdump, binwalk, radare2, Ghidra, QEMU&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

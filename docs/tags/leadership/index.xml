@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Leadership on Matthew do Santos-Zounon</title>
+    <link>http://localhost:1313/tags/leadership/</link>
+    <description>Recent content in Leadership on Matthew do Santos-Zounon</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/leadership/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SFU Robotics: Autonomous Robot Soccer</title>
+      <link>http://localhost:1313/experience/sfu-robotics/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/experience/sfu-robotics/</guid>
+      <description>&lt;p&gt;Role: Software Team Lead&lt;br&gt;&#xA;Location: Burnaby, BC&lt;br&gt;&#xA;Team: SFU Autonomous Robot Soccer Club&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Led the software team responsible for autonomous robot behavior and coordination, while working closely with electrical, firmware, and mechanical teams to deliver robots for RoboCup.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-i-shipped&#34;&gt;What I shipped&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Directed design and development of autonomous robot software in C++ using Qt6 and Protobuf.&lt;/li&gt;&#xA;&lt;li&gt;Ran weekly software meetings and coordinated across sub-teams in admin syncs.&lt;/li&gt;&#xA;&lt;li&gt;Led recruitment by reviewing applications, conducting interviews, and onboarding new members.&lt;/li&gt;&#xA;&lt;li&gt;Collaborated with hardware teams to integrate systems and meet competition deadlines.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;impact&#34;&gt;Impact&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Established repeatable team processes that improved delivery cadence.&lt;/li&gt;&#xA;&lt;li&gt;Strengthened cross-team alignment to ship competition-ready robots.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;&#xA;&lt;p&gt;C++17/20, Qt6, Protobuf&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

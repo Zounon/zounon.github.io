@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mobile on Matthew do Santos-Zounon</title>
+    <link>http://localhost:1313/tags/mobile/</link>
+    <description>Recent content in Mobile on Matthew do Santos-Zounon</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mobile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rivian | VW: Mobile Release v2.21</title>
+      <link>http://localhost:1313/experience/rivian-mobile-release/</link>
+      <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/experience/rivian-mobile-release/</guid>
+      <description>&lt;p&gt;Role: Software Integration Engineer&lt;br&gt;&#xA;Location: Vancouver, BC&lt;br&gt;&#xA;Team: Rivian and Volkswagen Group Technologies&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Owned the release execution for v2.21 while scaling automated UI and API coverage across Android and iOS. The goal was to keep the release cadence predictable, reduce manual testing, and keep QA aligned with product and engineering.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-i-shipped&#34;&gt;What I shipped&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Led a sub-team of four through the full release cycle with PM, design, and dev.&lt;/li&gt;&#xA;&lt;li&gt;Built PyTest + Appium automation in GitHub Actions for simulated and bench vehicles.&lt;/li&gt;&#xA;&lt;li&gt;Expanded Android and iOS coverage and isolated regressions early.&lt;/li&gt;&#xA;&lt;li&gt;Mentored junior interns on test design, debugging, and automation fundamentals.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;impact&#34;&gt;Impact&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Improved release confidence by increasing automated coverage across platforms.&lt;/li&gt;&#xA;&lt;li&gt;Reduced coordination overhead by keeping release status and blockers visible.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;&#xA;&lt;p&gt;Python, PyTest, Appium, GitHub Actions, Android Studio (Java/Kotlin), Xcode (Swift)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
