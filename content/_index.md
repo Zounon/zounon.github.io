@@ -25,4 +25,6 @@ draft = false
 
 <!-- <p style="margin:18px 0 0;">Click on my experince above to learn more or see the projects I've been diving into below.</p> -->
 
+<p style="margin:18px 0 0;">If any of my experince sparks your interest I'd love chat and dive deep into the specifics, please reach out.</p>
+
 <p style="margin:18px 0 0;">also, I'm looking for places to rock climb in the GTA. If you need a belay or know a great spot to climb I'd love to chat!</p>
