@@ -2,51 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/experience/</loc>
+    <loc>https://mdsz.ca/experience/rivian-mobile-release/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experience/rivian-mobile-release/</loc>
+    <loc>https://mdsz.ca/experience/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://mdsz.ca/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/c&#43;&#43;/</loc>
+    <loc>https://mdsz.ca/experience/sfu-robotics/</loc>
     <lastmod>2024-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/leadership/</loc>
-    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/robotics/</loc>
-    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/experience/sfu-robotics/</loc>
-    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/e2e/</loc>
+    <loc>https://mdsz.ca/experience/operto-e2e-automation/</loc>
     <lastmod>2023-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experience/operto-e2e-automation/</loc>
-    <lastmod>2023-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/qa/</loc>
-    <lastmod>2023-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/testing/</loc>
-    <lastmod>2023-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/firmware/</loc>
+    <loc>https://mdsz.ca/experience/gatekeeper-firmware-analysis/</loc>
     <lastmod>2022-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experience/gatekeeper-firmware-analysis/</loc>
-    <lastmod>2022-12-01T00:00:00+00:00</lastmod>
+    <loc>https://mdsz.ca/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/security/</loc>
-    <lastmod>2022-12-01T00:00:00+00:00</lastmod>
+    <loc>https://mdsz.ca/contact/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://mdsz.ca/tags/</loc>
   </url>
 </urlset>
