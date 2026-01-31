@@ -6,6 +6,7 @@ end = "12-2023"
 description = """
 When manual testing was cutting deep into Dev time, myself and my co-intern proposed an automated test suite. Together we developed ~200 E2E test cases using TypeScript/PlayWright. By integrating select tests to run as a Git pull-hook, and others to run overnight; we successfuly reduced manual testing time by over 62%.
 """
+readMoreUrl = "/contact/"
 +++
 
 Role: Quality Assurance Engineer  
