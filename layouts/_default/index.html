@@ -55,7 +55,8 @@
           {{ else if .Description }}
             {{- $readMoreUrl := .Params.readMoreUrl -}}
             {{- if $readMoreUrl -}}
-              <p>{{ .Description | markdownify }} <a href="{{ $readMoreUrl }}">I'd love to chat more about my experince, please reach out</a></p>
+              <p>{{ .Description | markdownify }}</p>
+              <p><a href="{{ $readMoreUrl }}">Let's get in touch</a></p>
             {{- else -}}
               <p>{{ .Description | markdownify }} <a href="{{ .RelPermalink }}">Read More -&gt;</a></p>
             {{- end -}}
