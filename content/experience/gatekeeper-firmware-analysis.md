@@ -3,8 +3,11 @@ title = "Firmware Analysis & QA Tooling @ Gatekeeper"
 date = 2022-12-01
 start = "05-2022"
 end = "12-2022"
-description = "Replaced manual tests with protocol emulation and added firmware analysis workflows."
-tags = ["firmware", "security", "qa"]
+description = """
+When manual testing is the norm I saw many opportunties to improve the efficeny and quality of QA's work. I built tools (which are still in use today) which 'just work'. Allowing any QA member to be more productive; instead of learning how to work with yet another tool.
+
+I also analysed firmeware and reverse engineered netowrk protocols to better understand - and therefore test - the embedded devices we were working on. 
+"""
 +++
 
 Role: Software Systems Engineer  
