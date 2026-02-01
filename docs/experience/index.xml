@@ -6,8 +6,15 @@
     <description>Recent content in Experiences on Matthew do Santos-Zounon</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/experience/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Modifying Firmware for Fun and Profit</title>
+      <link>http://localhost:1313/experience/modifying-firmware-for-fun-and-profit/</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/experience/modifying-firmware-for-fun-and-profit/</guid>
+      <description>&lt;p&gt;Something about me: I find it pretty annoying when my devices tell me what I must do. A phone that demands an update within 48 hours feels less like a tool and more like a landlord. From my high school days, I owned a calculator. It was obvious that since it was my calculator I could use it how I pleased. Somehow companies have made us think differently about phones, gaming consoles, and cars.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Dev Tooling &amp; Leadership @ Rivian|VW</title>
       <link>http://localhost:1313/experience/rivian-mobile-release/</link>

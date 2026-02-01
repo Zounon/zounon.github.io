@@ -4,9 +4,10 @@ draft = true
 title = 'Modifying Firmware for Fun and Profit'
 +++
 
-Something about me: I find it pretty annoying when my devices tell me what I must do. A phone that demands an update within 48 hours feels less like a tool and more like a landlord. From my high school days, I owned a calculator. It was obvious that since it was my calculator I could use it how I pleased. Somehow companies have made us think differently about phones, gaming consoles, and cars.
-
-These devices are mine, but so many phones come preinstalled with Facebook or YouTube and there is no way to uninstall them. It is one thing to say I am banned from using your service, but when did I lose my right to delete YouTube from my phone?
+My first phone had been jailbroken, ran multiple OS's and had a few hardware swaps; that phone was defintely *mine*.
+My current phone came preinstalled with Facebook and YouTube and there is **no way to uninstall them**.
+And my laptop asks if I want to update now or try again tomorrow; that's not *my* laptop anymore - microsoft owns it.
+If I can't modify my computers, they are no longer mine. In this blog post I walk through how anyone can read and modify the firmware in their device.
 
 Between a computer's hardware and software sits its firmware. Firmware is like software, except as the name suggests it is not as flexible and runs closer to the hardware. You interact with the software layer by tapping the camera app. The app cannot access the camera directly; it asks the firmware to stream camera data its way, and the firmware talks to the camera.
 
