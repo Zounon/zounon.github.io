@@ -9,11 +9,11 @@
     <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Modifying Firmware for Fun and Profit</title>
+      <title>Hacking Firmware for Fun and Profit</title>
       <link>http://localhost:1313/experience/modifying-firmware-for-fun-and-profit/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/experience/modifying-firmware-for-fun-and-profit/</guid>
-      <description>&lt;p&gt;My first phone had been jailbroken, ran multiple OS&amp;rsquo;s and had a few hardware swaps; that phone was defintely &lt;em&gt;mine&lt;/em&gt;.&#xA;My current phone came preinstalled with Facebook and YouTube and there is &lt;strong&gt;no way to uninstall them&lt;/strong&gt;.&#xA;And my laptop asks if I want to update now or try again tomorrow; that&amp;rsquo;s not &lt;em&gt;my&lt;/em&gt; laptop anymore - microsoft owns it.&#xA;If I can&amp;rsquo;t modify my computers, they are no longer mine. In this blog post I walk through how anyone can read and modify the firmware in their device.&lt;/p&gt;</description>
+      <description>&lt;p&gt;My first phone had been jailbroken, ran multiple OS&amp;rsquo;s and had a few hardware swaps; that phone was defintely &lt;em&gt;mine&lt;/em&gt;.&#xA;My current phone came preinstalled with Facebook and YouTube and there is &lt;strong&gt;no way to uninstall them&lt;/strong&gt;.&#xA;And my laptop asks if I want to update now or try again tomorrow; that&amp;rsquo;s not &lt;em&gt;my&lt;/em&gt; laptop anymore - microsoft owns it.&#xA;If I can&amp;rsquo;t modify my computers, they are no longer mine. In this blog post I walk through how anyone can read and modify the firmware in their device to regain ownership.&#xA;&lt;a href=&#34;http://localhost:1313/experience/modifying-firmware-for-fun-and-profit/&#34;&gt;Read More&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dev Tooling &amp; Leadership @ Rivian|VW</title>
