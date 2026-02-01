@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+    <title>Modifying Firmware for Fun and Profit :: Matthew do Santos-Zounon</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Something about me: I find it pretty annoying when my devices tell me what I must do. A phone that demands an update within 48 hours feels less like a tool and more like a landlord. From my high school days, I owned a calculator. It was obvious that since it was my calculator I could use it how I pleased. Somehow companies have made us think differently about phones, gaming consoles, and cars.
+" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="http://localhost:1313/experience/modifying-firmware-for-fun-and-profit/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/main.min.49a6ce4e76a6cec574ff04615174bfec919ffb03ed94514f5ab30166c03843e6.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="http://localhost:1313/favicon.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Modifying Firmware for Fun and Profit">
+<meta property="og:description" content="Something about me: I find it pretty annoying when my devices tell me what I must do. A phone that demands an update within 48 hours feels less like a tool and more like a landlord. From my high school days, I owned a calculator. It was obvious that since it was my calculator I could use it how I pleased. Somehow companies have made us think differently about phones, gaming consoles, and cars.
+" />
+<meta property="og:url" content="http://localhost:1313/experience/modifying-firmware-for-fun-and-profit/" />
+<meta property="og:site_name" content="Matthew do Santos-Zounon" />
+
+  <meta property="og:image" content="http://localhost:1313/og-image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2026-02-01 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Matt dSZ
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/do_santos_zounon_resume.pdf">Resume</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Zounon">GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/mdsz/">LinkedIn</a></li>
+        
+      
+        
+          <li><a href="mailto:matthewsantos314@gmail.com">Email</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  
+  
+  <div class="navigation-menu__inner menu--desktop" style="display:flex; justify-content:space-between; align-items:center; gap:12px; width:100%; flex-wrap:nowrap;">
+    <ul class="menu navigation-menu__group navigation-menu__group--left" style="display:flex; flex-direction:row; flex-wrap:nowrap; gap:42px; align-items:center; margin:0; padding:0; list-style:none;">
+      
+    </ul>
+    <ul class="menu navigation-menu__group navigation-menu__group--right" style="display:flex; flex-direction:row; flex-wrap:nowrap; gap:42px; align-items:center; margin:0; padding:0; list-style:none;">
+      
+        
+          <li><a href="/do_santos_zounon_resume.pdf" style="text-decoration:none;" target="_blank" rel="noopener">Resume</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Zounon" style="text-decoration:none;" target="_blank" rel="noopener">GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/mdsz/" style="text-decoration:none;" target="_blank" rel="noopener">LinkedIn</a></li>
+        
+      
+        
+          <li><a href="mailto:matthewsantos314@gmail.com" style="text-decoration:none;" >Email</a></li>
+        
+      
+    </ul>
+  </div>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="http://localhost:1313/experience/modifying-firmware-for-fun-and-profit/">Modifying Firmware for Fun and Profit</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2026-02-01</time></div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>Something about me: I find it pretty annoying when my devices tell me what I must do. A phone that demands an update within 48 hours feels less like a tool and more like a landlord. From my high school days, I owned a calculator. It was obvious that since it was my calculator I could use it how I pleased. Somehow companies have made us think differently about phones, gaming consoles, and cars.</p>
+<p>These devices are mine, but so many phones come preinstalled with Facebook or YouTube and there is no way to uninstall them. It is one thing to say I am banned from using your service, but when did I lose my right to delete YouTube from my phone?</p>
+<p>Between a computer&rsquo;s hardware and software sits its firmware. Firmware is like software, except as the name suggests it is not as flexible and runs closer to the hardware. You interact with the software layer by tapping the camera app. The app cannot access the camera directly; it asks the firmware to stream camera data its way, and the firmware talks to the camera.</p>
+<p>These layers (software, firmware, hardware) abstract away the intricacies of each bit of hardware. Many OSes can run on your computer because they all just ask, &ldquo;open the webcam please,&rdquo; and it is the firmware&rsquo;s job to handle the specifics. But firmware can also decide that an OS is &ldquo;compromised&rdquo; and refuse to boot. At first glance this sounds like a nice security feature. The problem is that companies are often more incentivized by money than customer safety.</p>
+<p>Xbox and PlayStation systems will brick if they detect you tried to install your own software. Phones similarly will not run if you have gained root access. So, let&rsquo;s make these devices ours again.</p>
+<p>Similar to the a.out file you get after compiling C code, firmware is compiled to run, not to be read. This post gives an overview of static and dynamic firmware analysis and the kinds of workflows used to understand and modify firmware safely.</p>
+<h2 id="what-are-we-working-with">What are we working with?<a href="#what-are-we-working-with" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Assume you have the firmware file in hand. For popular devices, firmware can often be downloaded from vendor servers. In other cases, it must be extracted from the target device.</p>
+<p>Start by figuring out what kind of data you are dealing with. The <code>file</code> command reads the file header (or first 1024 bytes if it looks like ASCII) and tries to identify a format based on magic numbers in <code>/etc/magic</code>.</p>
+<p>Example outputs (three different firmware files):</p>
+<ul>
+<li><code>f.bin: firmware 1042 v1 TP-LINK Technologies ver. 1.0, version 3.15.7, 8258048 bytes or less, _ at 0x200 998400 bytes , _ at 0x100000 7077888 bytes</code></li>
+<li><code>s.bin: u-boot legacy uImage, SPI Flash Image, Linux/MIPS, Standalone Program (Not compressed), 111116 bytes, Load Address: 0X80200000, Entry Point: 0X80200000, Header CRC: 0X80EF7587, Data CRC: 0XCD95F789</code></li>
+<li><code>x.bin: data</code></li>
+</ul>
+<p>The first firmware claims to be for a TP-LINK router and gives a model, version, and layout. The second indicates a u-boot image plus a Linux/MIPS payload. The third just says &ldquo;data.&rdquo; This tells us the <code>file</code> command is helpful but limited.</p>
+<p>Magic numbers are just conventions. You can write whatever you want in the header and some tools will believe it. That is why we look deeper.</p>
+<h2 id="static-analysis">Static analysis<a href="#static-analysis" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Static analysis is safe but can be slow to understand. The goal is to identify the segments inside a firmware blob.</p>
+<h3 id="binwalk-peel-the-onion">Binwalk: peel the onion<a href="#binwalk-peel-the-onion" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p><code>binwalk</code> works like <code>file</code> but scans the entire file for known signatures, not just the header.</p>
+<p>Example output (truncated):</p>
+<pre tabindex="0"><code>DECIMAL       HEXADECIMAL     DESCRIPTION
+-------------------------------------------------------------------------------------------------------------------
+900           0x384           Flattened device tree, size: 15620 bytes, version: 17
+301887        0x49B3F         SHA256 hash constants, little endian
+324813        0x4F4CD         LZO compressed data
+412916        0x64CF4         uImage header, header size: 64 bytes, header CRC: 0x92BF52A5, created: 2021-01-05
+                              01:11:01, image size: 2887456 bytes, Data Address: 0x8000, Entry Point: 0x8000,
+                              data CRC: 0x334D567D, OS: Linux, CPU: ARM, image type: OS Kernel Image
+412980        0x64D34         Linux kernel ARM boot executable zImage (little-endian)
+3300436       0x325C54        Squashfs filesystem, little endian, version 4.0, compression:xz, size: 2951532
+6253652       0x5F6C54        Squashfs filesystem, little endian, version 4.0, compression:xz, size: 22085754
+</code></pre><p>Notice how <code>binwalk</code> gives you multiple embedded segments, with entry points and sizes. This is effectively many <code>file</code> checks rolled into one.</p>
+<h3 id="entropy-scanning">Entropy scanning<a href="#entropy-scanning" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Magic signatures can be missing or deceptive. Entropy scanning helps you identify sections that look like compressed data, code, or filler. <code>binwalk -E x.bin</code> does a rudimentary entropy scan. Tools like binvis.io are great for visualizing segment boundaries.</p>
+<h3 id="extracting-segments-with-dd">Extracting segments with dd<a href="#extracting-segments-with-dd" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Once you have offsets and sizes, you can extract segments directly. For example, if <code>binwalk</code> says a SquashFS filesystem starts at byte 3300436 and is 2951532 bytes long:</p>
+<pre tabindex="0"><code>dd if=x.bin bs=1 skip=3300436 count=2951532 of=squash1.squashfs
+</code></pre><p>Verify it:</p>
+<pre tabindex="0"><code>file squash1.squashfs
+</code></pre><p>Then unpack it:</p>
+<pre tabindex="0"><code>unsquashfs squash1.squashfs
+</code></pre><p>At that point you have a regular-looking filesystem and can start reading configs, scripts, and binaries. This is where <code>strings</code> and <code>grep</code> can reveal passwords, API keys, and boot logic.</p>
+<h2 id="modifying-files">Modifying files<a href="#modifying-files" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>There are two common approaches:</p>
+<ul>
+<li>Edit directly in a disassembler like Ghidra, radare2, or IDA Pro.</li>
+<li>Extract a segment, decompress, edit, recompress, and then repack the firmware.</li>
+</ul>
+<p>Patching firmware is delicate. Many images include CRCs or other checks that will prevent boot if anything changes. Some systems (famously phones) can hard-brick if they detect tampering.</p>
+<h2 id="dynamic-analysis">Dynamic analysis<a href="#dynamic-analysis" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Static analysis gives you structure. Dynamic analysis gives you behavior.</p>
+<p>Most embedded firmware targets MIPS, ARM, or RISC-V, which do not run natively on x86. That is where emulation comes in.</p>
+<h3 id="qemu">QEMU<a href="#qemu" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>QEMU is the standard emulator for this task. It offers two relevant modes:</p>
+<ul>
+<li>Full-system emulation: simulates the entire architecture (slow, but accurate).</li>
+<li>User-mode emulation: runs a single binary (fast, often enough).</li>
+</ul>
+<p>If the binary depends on a full userland, user-mode can still work by emulating BusyBox. BusyBox is commonly used in embedded Linux because it compresses many utilities into a single binary.</p>
+<p>If you can run BusyBox under QEMU user-mode, you effectively have a working environment for many tasks without full-system emulation.</p>
+<h2 id="conclusion">Conclusion<a href="#conclusion" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>That is the high-level overview of static and dynamic firmware analysis. The tooling can sound intimidating, but the workflow is approachable once you break it into steps: identify, extract, verify, and then experiment. If you want to go deeper, I recommend starting with sample firmware images and practicing extraction and repacking workflows.</p>
+<h2 id="references-to-explore">References to explore<a href="#references-to-explore" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>HackTricks firmware analysis notes</li>
+<li><code>file</code>, <code>binwalk</code>, <code>dd</code>, and <code>unsquashfs</code> man pages</li>
+<li>Ghidra, radare2, and IDA Pro</li>
+<li>QEMU and BusyBox</li>
+</ul>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h"></span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+    
+    
+      <a href="http://localhost:1313/experience/rivian-mobile-release/" class="button inline next">
+         [<span class="button__text">Dev Tooling &amp; Leadership @ Rivian|VW</span>] &gt;
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2026 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
