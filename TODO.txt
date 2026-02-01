@@ -9,4 +9,4 @@ TODO NEXT
 Overall Goal: add detailed sections about the work exerince I've done and projects I've build. They should be short to-the-point glances that expand and give conext to  my resume bullet poitns.
 
 1. start with industry experince. From my resume copy the notes into a text file. From there create sections in the website which start to outline the work I've done.
-
+2. need to refine PDF uploads

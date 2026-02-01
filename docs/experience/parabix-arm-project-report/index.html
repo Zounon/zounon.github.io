@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+    <title>Improving Parabix Performance on ARM Architecture :: Matthew do Santos-Zounon</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Converted from the original LaTeX project report with inline figures and code snippets.
+" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="http://localhost:1313/experience/parabix-arm-project-report/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/main.min.49a6ce4e76a6cec574ff04615174bfec919ffb03ed94514f5ab30166c03843e6.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="http://localhost:1313/favicon.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Improving Parabix Performance on ARM Architecture">
+<meta property="og:description" content="Converted from the original LaTeX project report with inline figures and code snippets.
+" />
+<meta property="og:url" content="http://localhost:1313/experience/parabix-arm-project-report/" />
+<meta property="og:site_name" content="Matthew do Santos-Zounon" />
+
+  <meta property="og:image" content="http://localhost:1313/og-image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2026-02-01 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Matt dSZ
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/do_santos_zounon_resume.pdf">Resume</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Zounon">GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/mdsz/">LinkedIn</a></li>
+        
+      
+        
+          <li><a href="mailto:matthewsantos314@gmail.com">Email</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  
+  
+  <div class="navigation-menu__inner menu--desktop" style="display:flex; justify-content:space-between; align-items:center; gap:12px; width:100%; flex-wrap:nowrap;">
+    <ul class="menu navigation-menu__group navigation-menu__group--left" style="display:flex; flex-direction:row; flex-wrap:nowrap; gap:42px; align-items:center; margin:0; padding:0; list-style:none;">
+      
+    </ul>
+    <ul class="menu navigation-menu__group navigation-menu__group--right" style="display:flex; flex-direction:row; flex-wrap:nowrap; gap:42px; align-items:center; margin:0; padding:0; list-style:none;">
+      
+        
+          <li><a href="/do_santos_zounon_resume.pdf" style="text-decoration:none;" target="_blank" rel="noopener">Resume</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Zounon" style="text-decoration:none;" target="_blank" rel="noopener">GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/mdsz/" style="text-decoration:none;" target="_blank" rel="noopener">LinkedIn</a></li>
+        
+      
+        
+          <li><a href="mailto:matthewsantos314@gmail.com" style="text-decoration:none;" >Email</a></li>
+        
+      
+    </ul>
+  </div>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="http://localhost:1313/experience/parabix-arm-project-report/">Improving Parabix Performance on ARM Architecture</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2026-02-01</time></div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h2 id="abstract">Abstract<a href="#abstract" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>This report details our efforts to improve the performance of Parabix, a parallel bitstream framework,
+on ARM architecture. Parabix leverages Single Instruction, Multiple Data (SIMD) parallel processing to achieve gigabit
+per second text processing. While Parabix has proven its efficiency on x86 architecture, it did not achieve an
+equivalent performance on ARM due to the need for architecture-specific optimization required to take full leverage
+the different SIMD instruction set.
+In this project we utilize ARM&rsquo;s advanced SIMD extension, NEON, to improve the performance of Parabix
+on ARM.</p>
+<p>We rewrote functions within the <code>IDISA_ARM_Builder</code> using NEON intrinsics.
+Compared to the previous implementation we achieved a 58% speedup on QA tests and
+demonstrated a 2% to 32% decrease in CPU cycle counts on individual Parabix tools using our performance testing script.</p>
+<p>Additionally, we explored the potential of incorporating ARM&rsquo;s Scalable Vector Extension (SVE) into Parabix.
+Our research involved creating an experimental <code>IDISA_ARM_SVE_Builder</code> and
+analyzing the challenges of integrating SVE&rsquo;s vector-width agnostic programming into Parabix&rsquo;s existing architecture.
+We propose changes to Parabix&rsquo;s code generation which allow for better support of SVE by decoupling target-specific
+implementation concerns.</p>
+<p>Our work demonstrates the performance improvements achievable
+through applying NEON intrinsics and lays groundwork for utilizing SVE within Parabix.</p>
+<h2 id="introduction">Introduction<a href="#introduction" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>From smartphones to supercomputers, ARM architecture powers an increasingly diverse range of computer devices.
+As ARM captures a growing market share across embedded systems, mobile devices, and even high-performance
+computing, it is crucial for software to effectively leverage ARM&rsquo;s capabilities.
+While many applications can simply be recompiled for ARM using LLVM, high-performance parallel
+processing frameworks like Parabix require architecture-specific optimizations to achieve peak efficiency.</p>
+<p>This project aims to improve Parabix performance on ARM through application of ARM&rsquo;s advanced SIMD extension, NEON.
+Parabix utilizes SIMD to achieve gigabit-per-second text processing speeds.
+While Parabix has demonstrated impressive efficiency on x86 architectures, its performance on ARM has lagged due
+to insufficient use of ARM&rsquo;s unique SIMD instruction set.</p>
+<p>NEON offers a powerful set of SIMD intrinsics that can dramatically accelerate parallel computation.
+By rewriting functions within Parabix&rsquo;s ARM-specific builder, <code>IDISA_ARM_Builder</code>,
+we aim to close the performance gap between the current implementation and what ARM is capable of.
+Our approach focused on identifying opportunities where NEON intrinsics could replace inefficient, generic
+operations, while also guaranteeing an entirely correct implementation.</p>
+<p>This report details our methodology, implementation, and results in optimizing Parabix for ARM. We begin
+with an overview of ARM&rsquo;s growing importance and SIMD efficiency, followed by an exploration of
+our NEON optimizations.
+We present rigorous performance measurements demonstrating substantial improvements across various
+Parabix tools. Additionally, we investigate the potential for incorporating ARM&rsquo;s SVE into Parabix,
+laying the groundwork for a future implementation.</p>
+<p>Our work not only demonstrates significant performance improvements through ARM NEON optimizations but
+also provides insights into adapting Parabix for SVE. By improving Parabix&rsquo;s ARM performance, we extend its
+applicability to a wider range of devices and use cases, from efficient text processing on mobile devices
+to high-throughput analysis on ARM-based supercomputers.</p>
+<h2 id="background">Background<a href="#background" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="why-arm">Why ARM?<a href="#why-arm" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>ARM architecture powers a diverse range of devices, from efficient smartwatches to the most powerful supercomputers .
+Designed for efficient computing, ARM is the most popular choice for IoT and embedded devices.
+However, its applications extend beyond low-power devices.
+The vast majority of smartphones and tablets rely on ARM&rsquo;s efficiency to perform power intensive tasks while
+maintaining a long battery life.</p>
+<p>Currently 13% of laptops are powered by ARM, it is estimated that by 2025 ARM will capture 21% of the market .</p>
+<p>ARM isn&rsquo;t only efficient for portable devices. SVE has proven to create efficiency
+at the largest scales. For instance, Fugaku, the world&rsquo;s fastest supercomputer from 2020 to 2022, utilized SVE
+to surpass all other supercomputers..
+It is clear that the efficiency and customization of ARM architecture allows it to excel across a wide range of
+computing applications, making ARM ubiquitous.</p>
+<p>Parallelism is fundamental to Parabix. ARM&rsquo;s strong support for efficient parallelism through NEON and SVE
+creates an opportunity for Parabix to run efficiently on both smartwatches and supercomputers
+, something which not feasible on x86.</p>
+<h3 id="efficiency-of-simd">Efficiency of SIMD<a href="#efficiency-of-simd" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>SIMD (Single Instruction, Multiple Data) is a parallel computing method where a single instruction operates on
+multiple data points simultaneously, enabling significant speedups compared to scalar execution.
+However, this efficiency can only be realized when the
+desired computation is supported by the underlying architecture.</p>
+<p>In 2001 ARM introduced the advanced SIMD extension, called <em>NEON</em>.
+Unlike previous SIMD implementations, NEON&rsquo;s design allows for easy application to a wide range of problem domains.
+Notably this project makes use of NEON intrinsics. Intrinsics are pre-defined, architecture-specific functions that
+map to assembly instructions. This mapping eliminates the need for the translation that occurs with a generic function.
+Intrinsics also provide the compiler with context that assembly instructions alone do not have. Overall, NEON
+intrinsics enable programmers with a simple way to implement high efficiency computation.</p>
+<h2 id="project-goals">Project Goals<a href="#project-goals" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Our primary objectives are to improve the performance of Parabix on ARM architecture,
+ensure the correctness of its implementation, and extend its functionality to leverage
+the NEON instruction set</p>
+<h3 id="starting-state">Starting State<a href="#starting-state" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>In 2022, an attempt was made to write an ARM specific builder for Parabix.
+Their ARM builder, <code>IDISA_ARM_Builder</code>, was an adaptation of the already existing <code>IDISA_SSE_Builder</code>.
+The adaptation used many architecture-agnostic functions which resulted in an inefficient and sometimes incorrect implementation.</p>
+<h3 id="desired-state">Desired State<a href="#desired-state" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Given this initial state, our primary goals were to ensure a completely correct implementation
+and to utilize ARM-native features to improve efficiency. These objectives go hand-in-hand, as
+ARM NEON provides a set of intrinsics that are both guaranteed to be correct and highly efficient.</p>
+<p>To achieve these goals, we planned to utilize the existing QA test suite to verify correctness
+of our changes. Each run of the test suite also reported the duration of each test, providing
+a general idea of efficiency improvements. However, for more accurate statistics, we planned
+to create a performance testing script. The script would run a small subset of Parabix&rsquo;s
+tools multiple times while recording wall-clock time and CPU cycle counts.
+Allowing for an accurate understanding of our improvements.</p>
+<p>Finally, after successfully applying NEON intrinsics, we planned to explore the viability
+of using NEON&rsquo;s SVE to achieve further performance increase.</p>
+<h2 id="project-design">Project Design<a href="#project-design" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="build-and-execution-environments">Build and Execution Environments<a href="#build-and-execution-environments" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Building Parabix for ARM presented the challenge of running ARM architecture on our x86 machines.
+Without access to ARM hardware we planned to use the emulator QEMU . QEMU offers a complete
+ARM system emulation allowing us to to execute ARM binaries, even with ARM specific extensions like SVE, on x86 hardware.</p>
+<h3 id="idisa_arm_builder">IDISA_ARM_Builder<a href="#idisa_arm_builder" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>In Parabix, operations such as a vector shuffle are first defined in an architecture-agnostic way. This ensures that
+Parabix can run on any architecture LLVM supports. However, because these function definitions cannot
+utilize architecture-specific features, their implementations are often inefficient.
+To address this, Parabix allows specialized architecture-specific builders to override the general implementation.
+In particular, the ARM builder overrides how SIMD operations are defined on ARM.</p>
+<p>We researched the available NEON intrinsics and identified candidate matches to the IDISA Builder functions.
+For some functions, such as <code>mvmd_slli</code>, <code>mvmd_srli</code>, and <code>mvmd_dslli</code>, LLVM doing the work for us by replacing
+the generic calls with NEON intrinsics. Other functions such as <code>mvmd_compress</code>, <code>hsimd_signmask</code>, and <code>bitblock_advance</code>
+had no suitable translation into NEON intrinsics, so their implementations were removed from the builder.</p>
+<p>The following are the remaining functions, along with a description of the NEON intrinsics used to implement them:</p>
+<ul>
+<li>
+<p><code>simd_bitreverse</code></p>
+<p><code>rbit</code> reverses the bits in each byte of the vector. <code>rev16</code> to <code>rev64</code> will reverse the bytes within each 16 to 64 bit field.</p>
+</li>
+<li>
+<p><code>esimd_mergel</code> and <code>esimd_mergeh</code></p>
+<p><code>zip1</code> and <code>zip2</code> provide the same functionality as <code>merge</code>.</p>
+</li>
+<li>
+<p><code>hsimd_packl</code> and <code>hsimd_packh</code></p>
+<p><code>uzp1</code> and <code>uzp2</code> provide the same functionality as <code>pack</code>.</p>
+</li>
+<li>
+<p><code>simd_popcount</code></p>
+<p><code>cnt</code> gives a population count for bytes in a vector. <code>addp</code> reduces the vector to the appropriate field width and element count.</p>
+</li>
+</ul>
+<h3 id="measuring-improvements">Measuring Improvements<a href="#measuring-improvements" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>The overarching goal for this project is to demonstrate an improvement in performance so accurately tracking Parabix tool performance
+is important. We planned to create a performance testing script
+written in either Bash or Python. The script would run a small subset of Parabix&rsquo;s tools and capture CPU cycle counts using Parabix&rsquo;s debug flags.</p>
+<h2 id="implementation">Implementation<a href="#implementation" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="development-environments">Development Environments<a href="#development-environments" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>QEMU&rsquo;s ARM system emulation was accurate but slow.
+To mitigate long build times within the emulator, we opted to cross-compile Parabix on our x86 machines.
+However, even running the pre-compiled binaries proved too time-consuming.
+To address this, we acquired a Raspberry Pi 5, which uses the Armv8-A processor, enabling us to build and
+run Parabix on physical ARM hardware.</p>
+<p>The only downside to using physical hardware over emulation was that Raspberry Pi&rsquo;s SoC, Broadcom BCM2712, opted to
+not include ARM&rsquo;s SVE extension . To work around this we employed QEMU&rsquo;s user-mode emulation to emulate SVE.</p>
+<p>All performance results presented in this report were obtained using the Raspberry Pi 5 running Raspberry Pi OS.</p>
+<h3 id="idisa_arm_builder-1">IDISA_ARM_Builder<a href="#idisa_arm_builder-1" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>To demonstrate the changes made throughout the <code>IDISA_ARM_Builder</code> we highlight one function, <code>esmid_mergel</code></p>
+<h4 id="previous-implementation">Previous implementation<a href="#previous-implementation" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p><code>esmid_mergel</code> was written with generic function calls such as <code>smid_or</code>. The implementation was
+also not compete as it only handled the special cases where field with was equal to 1 or 2. In all other cases
+this function simply called the default builder to do the computation.
+In all cases this function generated inefficient function calls.</p>
+<h4 id="our-implementation">Our implementation<a href="#our-implementation" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>After researching NEON intrinsics we found one called <code>zip1</code> which performs the exact computation needed
+for <code>esmid_mergel</code>.
+We replaced the previous implementation with a single function which simply calls <code>zip1</code>.
+The complete function is shown in the code snippet below. Note that our implementation handles the common field width
+sizes from 16 to 64, but similar to the previous implementation, calls the default builder when given a field width
+outside that range. This is common for all builder functions to ensure that any given field width is correctly computed.
+<code>esmid_mergel</code> is a fortunate case where a single NEON intrinsic computed the desired computation,
+most functions required the use of multiple intrinsics.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">Value</span> <span class="o">*</span> <span class="n">IDISA_ARM_Builder</span><span class="o">::</span><span class="n">esimd_mergel</span><span class="p">(</span><span class="kt">unsigned</span> <span class="n">fw</span><span class="p">,</span> <span class="n">Value</span> <span class="o">*</span> <span class="n">a</span><span class="p">,</span> <span class="n">Value</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">((</span><span class="n">fw</span> <span class="o">&gt;=</span> <span class="mi">16</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">fw</span> <span class="o">&lt;=</span> <span class="mi">64</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">getVectorBitWidth</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="n">ARM_width</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">nElms</span> <span class="o">=</span> <span class="n">getVectorBitWidth</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="n">fw</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">halfFw</span> <span class="o">=</span> <span class="n">fw</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">Function</span> <span class="o">*</span> <span class="n">zip1_fn</span> <span class="o">=</span> <span class="n">Intrinsic</span><span class="o">::</span><span class="n">getDeclaration</span><span class="p">(</span><span class="n">getModule</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Call to ARM NEON intrinsic
+</span></span></span><span class="line"><span class="cl">    <span class="n">Intrinsic</span><span class="o">::</span><span class="n">aarch64_sve_zip1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">FixedVectorType</span><span class="o">::</span><span class="n">get</span><span class="p">(</span><span class="n">getIntNTy</span><span class="p">(</span><span class="n">halfFw</span><span class="p">),</span> <span class="n">nElms</span> <span class="o">*</span> <span class="mi">2</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nf">CreateCall</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">zip1_fn</span><span class="o">-&gt;</span><span class="n">getFunctionType</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">zip1_fn</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="n">fwCast</span><span class="p">(</span><span class="n">halfFw</span><span class="p">,</span> <span class="n">a</span><span class="p">),</span> <span class="n">fwCast</span><span class="p">(</span><span class="n">halfFw</span><span class="p">,</span> <span class="n">b</span><span class="p">)});</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">IDISA_Builder</span><span class="o">::</span><span class="n">esimd_mergel</span><span class="p">(</span><span class="n">fw</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><em>Rewrite of <code>esmid_mergel</code> to use the NEON <code>zip1</code> intrinsic.</em></p>
+<p>The same data is displayed in both figures. The left has a time scale of 30 seconds, the right a
+scale of 2.5 seconds. Note that two tests, <code>greptest</code> and <code>editd_test</code>, are not included
+because they failed in the previous implementation.
+This data demonstrates that our changes have a made an improvement in performance
+across every test.</p>
+<p><img src="/experience/parabix-arm-project-report/test-Both.png" alt="Results of make test before and after our changes.">
+<em>Results of <code>make test</code> before and after our changes.</em></p>
+<h3 id="cycle-counts">Cycle Counts<a href="#cycle-counts" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Written in Python, the performance testing script calls Parabix tools <code>icgrep</code>, <code>wc</code>, and <code>csv2json</code>
+and gives them large files as input.
+We pass the debug flag <code>-EnableCycleCounter</code> to capture the number of CPU cycles used by each
+by each kernel, which is essential for accurately measuring our performance improvements.
+Parabix also automatically caches kernels to improve run time.
+To ensure that successive test with small changes were not affected by what was stored in the cache
+and smooth variance in the run times
+we used a second debug flag <code>--enable-object-cache=0</code> which disables the object cache.</p>
+<p>The test script runs each tool 10 times to smooth out variance resulting from CPU and IO caches warming up.
+For each run, it captures the cycle counter report
+and computes an average of the cycle count totals by kernel across all runs.
+We found that the script gave us
+very repeatable measurements.</p>
+<p>By our measurements, we reduced the total average cycles used by <code>icgrep</code> by 32.4%,
+the cycles used by <code>wc</code> by 11.4%, and the cycles used by <code>csv2json</code> by 2%. GNU
+perf measurements showed an increase from 180 MB/s to 283 MB/s IO bandwidth for <code>icgrep</code>,
+379 MB/s to 571 MB/s for <code>wc</code>, and 108 MB/s to 113 MB/s for <code>csv2json</code>.</p>
+<p>The numbers from <code>icgrep</code> and <code>wc</code> are encouraging, and we were glad to see that the two
+tools used to measure confirm that we&rsquo;re spending less time on each item and so getting through
+the entire stream faster. The numbers we measured from <code>csv2json</code>, however, are in the noise.
+The operations we were able to optimize on ARM platforms &ndash; pack, merge, popcount, etc. &ndash; are operations
+that <code>icgrep</code> and <code>wc</code> both rely heavily on. <code>csv2json</code>, however, performs
+many deletions and insertions, and relies most heavily on bitwise compress-right and expand-right
+(<code>pext</code> and <code>pdep</code>. Without hardware support these operations are slow on ARM platforms,
+and so there was not much we were able to do to improve them.</p>
+<h2 id="scalable-vector-extensions-sve">Scalable Vector Extensions (SVE)<a href="#scalable-vector-extensions-sve" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="sve-overview">SVE Overview<a href="#sve-overview" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>SVE is an optional extension in the ARM architecture introduced in ARMv8.2-A . It allows for
+vector registers to be implemented using widths from 128-2048 bits with the only restriction that
+the chosen width is some multiple of 128. To support this, SVE defines a vector instruction
+set and programming paradigm for writing code that is vector-width agnostic. SVE aims to give hardware
+manufacturers some freedom in choosing how wide to implement their processor&rsquo;s vector registers
+while giving software developers the ability to run on any processor that includes SVE regardless
+of the actual vector width. In addition to variable-width vector registers, the SVE architecture
+adds a set of predicated instructions, gather-loads and scatter-stores, and new instructions for
+horizontal vector reduction operations.</p>
+<p>SVE&rsquo;s vector width-agnostic programming paradigm is achieved largely through instruction predication
+and a set of predicate generation functions. Consider as an example the following simple example:</p>
+<p>*Simple loop example pseudocode would usually be quite simple:
+load strides of the vector register width into vector registers from <code>x</code> and <code>y</code>, use
+SIMD operations to perform multiplication and addition, and store in strides to <code>result</code>.</p>
+<p>SVE presents a unique challenge given that we do not know at compile time what the
+vector width will be. We can vectorize the given operations in a vector width-agnostic way by
+using two tools given by SVE: first, we can find how big the stride should be using one of the
+<code>cnt*</code> instructions provided by SVE to get the count of elements in a vector at run-time;
+second, we can use either use the runtime vector width to correctly scalaraize the tail or use
+vector predication to load and operate on the correct number of elements in the loop&rsquo;s tail.
+SVE provides a set of looping instructions that, given a loop index and
+a total number of elements, create a predicate register for different termination conditions.
+For example, <code>whilelt</code> creates a predicate vector with active elements up to the point
+that the loop index becomes greater than or equal to the total.</p>
+<p>The looping strategies presented here illustrate the key way that SVE&rsquo;s vector width-agnostic
+programming functions: it relies on moving values that were previously known at compile time to
+run time. This has implications not just on loading, storing, and handling vectors, but also in
+computing constant mask values or constant vectors. It&rsquo;s impossible to specify a scalable constant
+vector. Instead, they need to be computed at run time.</p>
+<p>SVE promises to give performance gains by and increased SIMD throughput, however it has yet to see
+widespread adoption. Apple Silicon&rsquo;s M-series processors do not implement SVE, and it appears that
+the Cortex-A710 ARMv9 processor is among the first Cortex processor to offer SVE, albeit with a vector
+width of only 128 bits. It&rsquo;s difficult to find comprehensive information on chipsets that implement
+SVE, but it appears the cloud computing space is the only space where SVE is easily accessible;
+Amazon&rsquo;s ec2 has virtual machine offerings running on their in-house ARM processors with SVE support .</p>
+<h3 id="scalable-vectors-in-llvm">Scalable Vectors in LLVM<a href="#scalable-vectors-in-llvm" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>LLVM introduced new types and intrinsics for supporting SVE and scalable vector architectures.
+Scalable vectors are written as <code>&lt;vscale x N x Ty&gt;</code> where:</p>
+<ul>
+<li><code>vscale</code> is a placeholder for a vector length multiplier known at run time</li>
+<li><code>N</code> is the minimum number of elements of type <code>Ty</code> the vector can hold</li>
+<li><code>Ty</code> is the numeric type of the elements of the vector</li>
+</ul>
+<p>SVE vectors must be some multiple of 128, so legal SVE vectors could be <code>&lt;vscale x 16 x i8&gt;</code>,
+<code>&lt;vscale x 2 x i64&gt;</code>, or any other vector where <code>N</code> times the width of <code>Ty</code> equals
+128.</p>
+<h2 id="supporting-sve-in-parabix">Supporting SVE in Parabix<a href="#supporting-sve-in-parabix" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="experimental-idisa_arm_sve_builder">Experimental IDISA_ARM_SVE_Builder<a href="#experimental-idisa_arm_sve_builder" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Our project submission includes an experimental IDISA Builder targeting SVE. Our builder is quite
+minimal; it only implements Parabix pack operations using scalable vector types. It serves only to
+prove that we can select the SVE implementation when SVE is available and emit code that uses scalable
+vectors. As such, it doesn&rsquo;t support SVE in any practical or performant way.</p>
+<p>*Implementation of the packl function for SVE shows the implementation of the packl function. It converts between the fixed
+vector type used elsewhere throughout Parabix and the scalable vector type required to call the SVE
+intrinsics provided by LLVM. Inspections of the generated assembly reveal that LLVM scalarizes the loads
+and stores; in fact, LLVM loads the scalable vector register a byte at a time. Clearly, this approach
+is not ideal.</p>
+<p>Our implementation also includes a function pass to try and help LLVM choose to use scalable vectors
+when the fixed vectors its using would fit. Our pass adds the <code>vscale_range</code> attribute to each
+kernel function which hints to LLVM that the scalable vector&rsquo;s <code>vscale</code> parameter will be within
+the given range and enables it to store fixed vectors in scalable vector registers when legal and
+perform optimizations using scalable vector types. In practice, however, we did not find that LLVM
+chose to do so.</p>
+<h3 id="parabixs-current-code-generation-architecture">Parabix&rsquo;s current code generation architecture<a href="#parabixs-current-code-generation-architecture" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Parabix programs comprise kernels and stream sets. Stream sets, internally, are managed buffers
+of data that are loaded into SIMD registers for parallel processing by kernels. Kernels can generate
+the machine code to operate on stream sets by using a KernelBuilder to generate LLVM IR directly or
+by using a PabloBuilder to generate a Pablo Abstract Syntax Tree (PabloAST). The PabloCompiler will
+then use a KernelBuilder to transform the PabloAST into LLVM IR. Parabix is also capable of compiling
+regular expressions to machine code capable of matching the expressions against data in a stream set.
+Regular expressions are compiled by generating Pablo code that performs the match at compiling it.</p>
+<p>The main entry point to the codegen layer is, then, the KernelBuilder. the figure below
+shows the inheritance chain culminating in the KernelBuilderImpl class that is consumed by all
+higher-level application layers.</p>
+<p><img src="/experience/parabix-arm-project-report/parabix-arch.png" alt="KernelBuilderImpl inheritance tree">
+<em>KernelBuilderImpl inheritance tree.</em></p>
+<p><img src="/experience/parabix-arm-project-report/parabix-comparch.png" alt="Proposed composition-based target codegen architecture">
+<em>Proposed composition-based target codegen architecture.</em></p>
+<h2 id="conclusion">Conclusion<a href="#conclusion" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Our project has been quite successful in meeting its goals. We were able to take the existing
+ARM implementation and mature it into an implementation that is correct and performant. We did this by
+identifying candidate IDISA operations that would benefit from the set of operations that NEON
+supports natively and implementing them using NEON SIMD instructions.
+Although not every candidate operation we identified ended up benefiting from NEON, we are satisfied
+with the breath of operations we did implement and we were able to verify for some that LLVM was already
+emitting optimal code for the default implementations. We were also able to take good performance
+measurements and quantify what the performance gain was to get a sense of which use cases
+benefited the most from our work and which benefited the least.</p>
+<p>Using the time we had left over in the project term we were able to begin investigations into SVE
+and assess how vector width-agnostic programming could be enabled in Parabix in the future. In the course
+of this work we identified potential architecture improvements that could be made to Parabix&rsquo;s codegen
+layer to enable easier implementation of support for new target architectures in the future.</p>
+<h3 id="lessons-learned">Lessons Learned<a href="#lessons-learned" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Throughout the project, we encountered several valuable lessons and insights. This project and, more
+generally, this course has demystified SIMD programming for us. Conceptually, SIMD programming is not
+a difficult thing to understand, but we now understand better how to reason about vectorized code,
+evaluate efficiency, and come up with more optimal solutions to problems. We have also gained a good
+sense of what kind of higher-level code is easily vectorizable by a compiler which will enable us to
+better reason about the performance characteristics of higher-level code and write more performant code
+more often.</p>
+<p>Measuring performance was also a big part of our project. Initially when comparing our implementation
+to the previous using <code>make test</code> we saw an extreme boost in performance. These
+were part of the results presented in the poster presentation. While these results were true, they
+weren&rsquo;t completely fair. Unlike our performance script <code>make test</code> does not circumvent caching.
+After accounting for caching we found that our changes made consistent improvement but not as
+extreme as we initially thought. Further, measuring wall-clock time is not always a meaningful
+measure of performance, and a good performance measuring system should look at several different
+metrics across several different use cases of the software its measuring to build a more
+holistic assessment.</p>
+<p>Early in the project we used QEMU to create virtualized ARM enviroments for us to work in.
+QEMU is impressively consistent in it&rsquo;s emulation. For example subtle bugs which we encountered
+within emulation were reproduced on hardware. The downside to QEMU was just how slow the system
+emulation was and how long of a development cycle it created. We underestimated how much this would
+hinder our ability to make progress.</p>
+<p>Working so closely with LLVM IR presented us with a steeper learning curve to overcome in the early
+phases of the project. LLVM IR&rsquo;s similarity to assembly language can sometimes obscure the fact that
+it&rsquo;s still a deep abstraction over the machine code you wish it to generate. For our use case, we
+wanted LLVM to emit specific sequences of instructions for each operation we implemented. In some
+cases that proved difficult. We learned that in these cases we had to instead write code from which
+LLVM could easily infer what our intent was; we had to give it more space to &ldquo;do the right thing&rdquo;.</p>
+<p>We&rsquo;re glad to have chosen a project that required us to work so closely with back-end compiler
+technologies. Working at this level and learning the Parabix codebase has helped us understand how
+to go about integrating a back-end into a compiler. The experience gained will serve as a good
+foundation for future compiler projects.</p>
+<h3 id="future-work">Future Work<a href="#future-work" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>We see little in the way of future improvements that could be made to Parabix&rsquo;s NEON support.
+The NEON instruction set is relatively simple as SIMD instruction sets go, and we don&rsquo;t see
+much more that can be improved with what it has to offer. We did find that the bitwise
+compress-right and expand-right (pext/pdep) operations were very slow on ARM, however we did not
+have enough project bandwidth to dedicate time to improving them. It still may be worth evaluating
+other algorithms to perform these operations. Some Parabix tools such as csv2json use these
+operations extensively, and for these tools there are big performance gains to be had by
+improving the algorithm for architectures where hardware support is unavailable.</p>
+<p>Our project submission includes an experimental IDISA SVE Builder that proves that we can detect
+the availability of SVE and emit SVE code. As discussed, it does not have usable performance and
+could take advantage of more of the features that SVE provides. Further work is needed to build out
+and mature the implementation.</p>
+<p>To that end, we&rsquo;ve also discussed how SVE breaks some of the assumptions made about targets by
+Parabix&rsquo;s existing codegen layer and, to a lesser extent, the rest of the Parabix codebase.
+Enabling vector width-agnostic programming in Parabix will mean refactoring the codebase to use
+LLVM&rsquo;s VectorType superclass to polymorphically work with both fixed and scalable vectors.</p>
+<p>In this report, we have presented a proposed architecture change to Parabix&rsquo;s codegen layer
+to support the effort to support vector width-agnostic programming and to allow more flexibility
+along the axes on which targets may differ. While the proposed updates would require updating many
+parts of the Parabix codebase they should be comparatively simple to implement as they are largely a
+reorganizing effort. The efforts to support both SVE and NVPTX
+would both benefit from the proposed changes should they be chosen for adoption.</p>
+<h3 id="repository-link-and-note-about-submission">Repository link and note about submission<a href="#repository-link-and-note-about-submission" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>The repository can be found here: <code>https://cs-git-research.cs.sfu.ca/sla489/parabix-devel</code></p>
+<p>Please note that we did not merge our SVE experimentation into the master branch as it is experimental
+and unstable. It is located in the repository under the <code>sve</code> branch, or the <code>final-sve</code> tag.</p>
+<h2 id="additional-figures-from-the-source-archive">Additional Figures from the Source Archive<a href="#additional-figures-from-the-source-archive" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><img src="/experience/parabix-arm-project-report/AI.jpeg" alt="AI">
+<em>AI</em></p>
+<p><img src="/experience/parabix-arm-project-report/Perf-10s.png" alt="Perf 10s">
+<em>Perf 10s</em></p>
+<p><img src="/experience/parabix-arm-project-report/Perf-Both.png" alt="Perf Both">
+<em>Perf Both</em></p>
+<p><img src="/experience/parabix-arm-project-report/Perf-max.png" alt="Perf max">
+<em>Perf max</em></p>
+<p><img src="/experience/parabix-arm-project-report/frog.jpg" alt="frog">
+<em>frog</em></p>
+<p><img src="/experience/parabix-arm-project-report/frog2.jpg" alt="frog2">
+<em>frog2</em></p>
+<p><img src="/experience/parabix-arm-project-report/parabix-policyarch.png" alt="parabix policyarch">
+<em>parabix policyarch</em></p>
+<p><img src="/experience/parabix-arm-project-report/test-Both.png" alt="test both">
+<em>test both</em></p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h"></span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="http://localhost:1313/experience/modifying-firmware-for-fun-and-profit/" class="button inline prev">
+        &lt; [<span class="button__text">Hacking Firmware for Fun and Profit</span>]
+      </a>
+    
+    
+      ::
+    
+    
+      <a href="http://localhost:1313/experience/rivian-mobile-release/" class="button inline next">
+         [<span class="button__text">Dev Tooling &amp; Leadership @ Rivian|VW</span>] &gt;
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2026 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

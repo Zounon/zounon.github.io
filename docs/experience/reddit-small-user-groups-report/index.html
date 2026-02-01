@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+    <title>Classifying Small User Groups in the Reddit Comment Corpus with Simple Features :: Matthew do Santos-Zounon</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Converted from the original LaTeX report with all archived figures embedded.
+" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="http://localhost:1313/experience/reddit-small-user-groups-report/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/main.min.49a6ce4e76a6cec574ff04615174bfec919ffb03ed94514f5ab30166c03843e6.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="http://localhost:1313/favicon.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Classifying Small User Groups in the Reddit Comment Corpus with Simple Features">
+<meta property="og:description" content="Converted from the original LaTeX report with all archived figures embedded.
+" />
+<meta property="og:url" content="http://localhost:1313/experience/reddit-small-user-groups-report/" />
+<meta property="og:site_name" content="Matthew do Santos-Zounon" />
+
+  <meta property="og:image" content="http://localhost:1313/og-image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2026-02-01 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Matt dSZ
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/do_santos_zounon_resume.pdf">Resume</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Zounon">GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/mdsz/">LinkedIn</a></li>
+        
+      
+        
+          <li><a href="mailto:matthewsantos314@gmail.com">Email</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  
+  
+  <div class="navigation-menu__inner menu--desktop" style="display:flex; justify-content:space-between; align-items:center; gap:12px; width:100%; flex-wrap:nowrap;">
+    <ul class="menu navigation-menu__group navigation-menu__group--left" style="display:flex; flex-direction:row; flex-wrap:nowrap; gap:42px; align-items:center; margin:0; padding:0; list-style:none;">
+      
+    </ul>
+    <ul class="menu navigation-menu__group navigation-menu__group--right" style="display:flex; flex-direction:row; flex-wrap:nowrap; gap:42px; align-items:center; margin:0; padding:0; list-style:none;">
+      
+        
+          <li><a href="/do_santos_zounon_resume.pdf" style="text-decoration:none;" target="_blank" rel="noopener">Resume</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Zounon" style="text-decoration:none;" target="_blank" rel="noopener">GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/mdsz/" style="text-decoration:none;" target="_blank" rel="noopener">LinkedIn</a></li>
+        
+      
+        
+          <li><a href="mailto:matthewsantos314@gmail.com" style="text-decoration:none;" >Email</a></li>
+        
+      
+    </ul>
+  </div>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="http://localhost:1313/experience/reddit-small-user-groups-report/">Classifying Small User Groups in the Reddit Comment Corpus with Simple Features</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2026-02-01</time></div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h2 id="abstract">Abstract<a href="#abstract" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>This report explores whether small groups of Reddit users can be accurately classified using only simple, non-aggregated features from the Reddit Comment Corpus. We engineer new features, including sentiment and NSFW scores, to improve classification. Using a Random Forest model, we test performance on several user groups but find precision and recall to be below 25%. Our results suggest that more complex methods are likely required to achieve high accuracy classification.</p>
+<h2 id="project-motivation">Project Motivation<a href="#project-motivation" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Say a large social media platform like Reddit is about to implement some large, very expensive model to understand user behaviour. This kind of task usually requires taking into account the complex network affects of tens of millions of users over a million subedits. Clearly this work will require a lot of resources. But is it worth it? Specifically, can we classify user comments without relying on aggregation across multiple posts, time periods, or network connections?</p>
+<h3 id="precise-question">Precise Question<a href="#precise-question" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Equivalently, the question we attempt to answer in this report: Is the Reddit comment corpus expressive enough to classify an arbitrary data point into some known grouping without any form of aggregation.?</p>
+<h2 id="first-look-at-the-dataset">First Look at the Dataset<a href="#first-look-at-the-dataset" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>The Reddit Comment Corpus is a large-scale dataset containing user comments from the Reddit platform. It was created and maintained by researchers to support studies in natural language processing, social media analysis, and other related fields.</p>
+<p>The dataset is approximately TODO terabytes in compressed format. The objective of this study is to identify correlations that will be useful for future analyses. To keep the scope manageable, we chose to work only with data from the most recent complete year available, 2023.</p>
+<p>However, even one year of data is too large for our current analysis so we randomly selected the month of March as our focus. We decided to use a single month rather than sampling across the entire year because the corpus is Hive partitioned by year and month in the compute cluster. This structure allows us to process data more efficiently when working with a specific partition, rather than accessing approximately 100,000 files at random.</p>
+<p>With the March 2023 subset of Reddit comments selected, we proceed by examining the features present in the data.</p>
+<h3 id="dataset-features">Dataset Features<a href="#dataset-features" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>The raw dataset contains a total of 51 features. Among these, <code>author</code>, <code>body</code>, and <code>score</code> are the most straightforward. These features store the username of the commenter, the text of the comment itself, and the score of the comment at the time the data was collected.</p>
+<p>The <code>subreddit</code> feature identifies the community where the comment was posted. Together, these four features capture the core elements most people think of when they see a Reddit comment: who posted it, what it says, which community it was posted to, and how it is being received.</p>
+<p>While knowing the subreddit gives some context to the comment, our simple feature engineering process refines this context further by linking the comment directly to the specific post it responds to.</p>
+<p>The remaining 37 features are metadata. Some of these describe the author. For example, certain subreddits allow users to decorate their username with custom text or symbols, which is stored in the <code>author_flair_richtext</code> feature. Other metadata fields include timestamps indicating when the comment was created, information about whether the comment was edited, and unique identifiers that link the comment to its parent post or thread.</p>
+<p>Other features in the dataset are useful for making API calls or for understanding network effects. The <code>id</code> feature stores the unique identifier of the comment, and it can be linked to the <code>parent_id</code> feature, which stores the identifier of the comment or post being replied to. This relationship can be used to model the structure of conversations and interactions between users.</p>
+<h3 id="metadata-features">Metadata Features<a href="#metadata-features" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>It is clear that the author’s name, the contents of the comment, the community where it was posted, and the comment’s score all play a major role in understanding the dataset. However, it is also important to examine the remaining features to determine whether they offer additional insight.</p>
+<p>Many of these features turned out to be heavily biased toward a single value. For example, the <code>is_submitter</code> feature, which indicates whether the author of the comment is also the author of the original post, is biased toward the value <em>False</em> approximately 90% of the time. The <code>can_gild</code> feature, which indicates whether a comment can receive Reddit Gold awards, is biased toward a single value 98% of the time. Some features, such as <code>distinguished</code>, which marks comments from moderators or administrators, are effectively constant in this subset and show a 100% bias toward a single value.</p>
+<p>This suggests that, while the dataset contains 51 features, the number of features with meaningful variation is much smaller. Our analysis shows that 61% of the dataset’s variability can be explained if 38 of the features are reduced to a single column containing their dominant value. This is a concerning result because it means that, for any given unique set of variables, roughly half the time the remaining variables will simply match the default values.</p>
+<p>To improve the potential for meaningful analysis, it will be necessary to introduce new features that capture additional information and are less biased toward a single value.</p>
+<p><img src="/experience/reddit-small-user-groups-report/last_bar_prefe.png" alt="Stacked bar chart showing the extent to which each feature is dominated by a single value, with each value represented by its own colour.">
+<em>Stacked bar chart showing the extent to which each feature is dominated by a single value, with each value represented by its own colour.</em></p>
+<h2 id="simple-feature-engineering">Simple Feature Engineering<a href="#simple-feature-engineering" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>In order to gain more useful insights from the dataset, we created additional features through simple feature engineering. This was done by explicitly identifying patterns that can be found within the existing data and turning them into measurable values.</p>
+<p>Starting with the <code>author</code> field, we applied simple regular expressions to generate the features <code>author_char_count</code> and <code>author_punct_count</code>, which record the total number of characters in a username and the amount of punctuation it contains.</p>
+<p>We also created the feature <code>author_is_deleted</code>, a boolean flag indicating cases where a user has deleted their account but their comments remain visible. This situation occurs in roughly 3% of the dataset. In future analyses, we plan to remove any rows where this flag is set to true.</p>
+<p>The same counting methods and the check for the string &ldquo;[deleted]&rdquo; were applied to the <code>body</code> feature, resulting in six new features being added to the dataset.</p>
+<p>We then extended our regex approach to search for patterns with specific meaning. A notable example is the term &ldquo;throwaway,&rdquo; which Reddit users often include in their usernames to signal that the account is for one-time use. Such accounts are typically used to post personal or sensitive information while keeping it separate from their main account, which may contain personally identifiable information. Using <code>jq</code>, we sampled the dataset for usernames resembling this pattern and generated a regular expression that could reliably capture this group.</p>
+<p>Another common pattern occurs when Reddit automatically assigns a generated username to new accounts. We identified this pattern and created a feature that distinguishes between accounts with automatically generated names and those with more personalized, unique usernames.</p>
+<p>This set of features represents the outcome of our initial round of simple feature engineering. While these new variables add meaningful dimensionality to the dataset by avoiding the bias seen in many of the default features, they alone are not sufficient for strong predictive performance.</p>
+<p><img src="/experience/reddit-small-user-groups-report/newfeatures.png" alt="Distribution of new simply engineered features">
+<em>Distribution of new simply engineered features</em></p>
+<h2 id="feature-engineering-with-sentiment-analysis">Feature Engineering with Sentiment Analysis<a href="#feature-engineering-with-sentiment-analysis" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Sentiment analysis is the process of identifying and interpreting the emotional tone of text. Applying sentiment analysis to the text-based features in our dataset allows us to create high-quality features that capture important information about each comment.</p>
+<p>Unlike the simple regex-based methods used earlier, extracting sentiment from text requires more computationally intensive techniques. Large Language Models (LLMs) perform exceptionally well at this task, but running them typically requires hundreds of gigabytes of GPU memory.</p>
+<p>Since we only had access to a laptop and the shared SFU compute cluster, we chose to use HuggingFace transformer models. These models are typically under one gigabyte in size and can run efficiently on a single laptop while still producing high-quality sentiment predictions.</p>
+<p>While sentiment analysis is often focused solely on detecting positive and negative sentiment, we expanded our scope to also capture NSFW sentiment. On Reddit, the “Not Safe for Work” (NSFW) tag is applied to certain communities to warn users that the content may be sexual, violent, or otherwise inappropriate for a public setting.</p>
+<p>Focusing only on positive and negative sentiment can be limiting for Reddit data because not all important nuances are tied to emotional polarity. A comment can be neutral in tone yet still contain explicit or sensitive material. By incorporating NSFW sentiment as a separate feature, we ensure that our analysis captures this additional layer of meaning, which is especially relevant for understanding user behaviour and community norms on the platform.</p>
+<h3 id="applying-transformers">Applying Transformers<a href="#applying-transformers" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>We began by testing several pre-trained HuggingFace transformer models, including <code>michellejieli/NSFW_text_classifier</code>, <code>artin-ha/toxic-comment-model</code>, and <code>cardiffnlp/twitter-roberta-base-sentiment-latest</code>. These models are trained to detect properties such as whether text is NSFW, toxic, or positive.</p>
+<p>When applied to a sample of 100,000 comments, these models performed well in obvious cases but often misclassified shorter comments, especially those with very few words. Since roughly half of the comments in the dataset contain fewer than twelve words, many of the resulting sentiment classifications were inaccurate.</p>
+<p>To address this, we explored a larger and more flexible model: Facebook’s <code>bart-large-mnli</code>. BART is designed for zero-shot classification, meaning it can assign text to categories we define ourselves rather than being limited to predefined sentiment classes. This allowed us to use categories such as <code>[&quot;sexually explicit NSFW&quot;, &quot;general discussion&quot;]</code> or <code>[&quot;toxic hurtful&quot;, &quot;positive helpful&quot;]</code>, making the model adaptable to our specific needs. Testing BART on a sample of 100,000 comments showed that it was significantly more accurate with short text. However, we encountered a bug where any text containing at least two underscores was automatically classified as NSFW. After removing underscores from the input, this issue was resolved, and we moved forward with using BART for the full dataset.</p>
+<p>At this point, we ran into another limitation: running BART in a distributed computing environment. Since our compute cluster uses multiple executors, each would need to load the large BART model locally. Despite several attempts, the cluster would stall when trying to load BART, producing no results. This led us to search for smaller, more lightweight sentiment analysis methods that would run efficiently in the cluster environment.</p>
+<p>We settled on using two alternative approaches: VADER from the Natural Language Toolkit (nltk) for positive and negative sentiment, and FastText for NSFW sentiment. VADER is a rule-based model that runs much more efficiently than BART, making it well-suited for our setup. For NSFW detection, FastText required training, so we constructed a balanced corpus. We selected 50,000 comments from subreddits whose names contained “NSFW” and another 50,000 comments randomly sampled from non-<code>restricted</code> subreddits. Although the dataset contains a <code>subreddit_type</code> feature that marks a subreddit as <code>restricted</code> when it is 18+, this label does not always correspond to sexual content. By building a targeted corpus, we aimed to train FastText to focus specifically on detecting sexual material rather than any content deemed inappropriate.</p>
+<p>Both models were configured to output sentiment scores between -1 and +1. VADER was found to produce a value of 0.0 for 55% of post texts and 37% of comment bodies. This occurs when VADER detects no pull toward positive or negative sentiment, which we interpret as “neutral.” Because this neutral category is so large, we filtered these results before continuing with the analysis of the remaining sentiment data.</p>
+<p>The graphs in the figures below show the sentiment analysis results from FastText and VADER, applied to both the comment body and the associated post text.</p>
+<p>For FastText, the results are heavily skewed toward a score of +1 in both the body and post text, indicating that the model tends to classify most content as strongly belonging to the positive or NSFW class it was trained for.</p>
+<p>When examining VADER sentiment, we first removed all cases where the score was exactly 0.0, as these represent neutral results. After this adjustment, the VADER scores display a clear bimodal distribution, with peaks around -0.5 and +0.5 for both comment body and post text. This produces a roughly four-quadrant pattern when comparing body sentiment to post sentiment.</p>
+<p>Overall, the VADER results appear more balanced and may be more useful for improving group classification, as they provide a greater spread of sentiment values rather than concentrating in a single extreme.</p>
+<p><img src="/experience/reddit-small-user-groups-report/ft.png" alt="FastText NSFW sentiment scores for comment body and post text. Scores are heavily skewed toward &#43;1 or “not sexual” class in both cases">
+<em>FastText NSFW sentiment scores for comment body and post text. Scores are heavily skewed toward +1 or &ldquo;not sexual&rdquo; class in both cases</em></p>
+<p><img src="/experience/reddit-small-user-groups-report/sentiment_vader_body_vs_post.png" alt="VADER positivity sentiment scores for comment body and post text after removing neutral results. The distribution is bimodal, with peaks near &#43;-0.5 in both cases.">
+<em>VADER positivity sentiment scores for comment body and post text after removing neutral results. The distribution is bimodal, with peaks near +-0.5 in both cases.</em></p>
+<h2 id="group-prediction">Group Prediction<a href="#group-prediction" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>After generating new features from the dataset, we returned to our main goal of determining whether these features could improve our ability to classify specific groups of Reddit users. We focused on three distinct groups: controversial users, throwaway accounts, and accounts with Reddit-generated style usernames.</p>
+<p>In the original dataset, the <code>controversiality</code> feature is a boolean that is set to true when the number of upvotes is roughly equal to the number of downvotes, and the total number of votes exceeds a certain threshold. Controversial users make up less than 2% of the dataset.</p>
+<p>Because most features are heavily skewed and none follow a normal distribution, we chose to use Random Forest Classification rather than statistical methods such as the t-test. This standard machine learning technique builds an ensemble of decision trees from the input features to produce classifications. After training, testing, and tuning the model, initial results were poor, with less than 1% positive case recall and less than 4% positive case precision.</p>
+<p>To improve performance, we applied the <code>imblearn</code> library, which is designed for handling highly imbalanced datasets. After retraining, the model was able to classify controversial posts with 26% precision, 21% recall, and an F1-score of 0.237.</p>
+<p>We then repeated this process for throwaway accounts and Reddit-generated usernames. Throwaway accounts make up less than 0.5% of users and proved indistinguishable from a random sample, with recall around 7%, precision around 2%, and an F1-score of 0.026.</p>
+<p>Finally, we tested the model on Reddit-generated accounts, which account for about 8% of the dataset. In this case, the results were similar to the controversial group, with 2% recall, 15% precision, and an F1-score of 0.19.</p>
+<p>In all three cases, the Random Forest model identified our engineered features as the most important for classification decisions. However, it is clear that these features alone are not sufficient for achieving high accuracy in distinguishing between the selected user groups.</p>
+<h2 id="conclusion">Conclusion<a href="#conclusion" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>The Reddit comment corpus proved to make small group classification a difficult task due to it&rsquo;s highly skewed distribution and low dimensionality.
+Through feature engineering we were able to extract better features, however features too were heavily skewed.
+Opting to train a RandomForest model on the dataset we were unsuccessfully in creating a model which achieved higher than 25% in either precision or recall on specific groups of Reddit users.
+From our analysis we conclude that more complex methods such as author comment aggregation over time, or deep learning, are required to achieve high confidence is classifying small subsets of Reddit users.</p>
+<h2 id="conclusion-1">Conclusion<a href="#conclusion-1" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="repository-link-and-note-about-submission">Repository link and note about submission<a href="#repository-link-and-note-about-submission" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h2 id="asside---aggrigating-over-sub">asside - Aggrigating over sub<a href="#asside---aggrigating-over-sub" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h2 id="additional-figures-from-the-source-archive">Additional Figures from the Source Archive<a href="#additional-figures-from-the-source-archive" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><img src="/experience/reddit-small-user-groups-report/barchart-final-full.png" alt="barchart final full">
+<em>barchart final full</em></p>
+<p><img src="/experience/reddit-small-user-groups-report/sentiment_fasttext_body_vs_post.png" alt="sentiment_fasttext_body_vs_post">
+<em>sentiment_fasttext_body_vs_post</em></p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h"></span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+    
+    
+      <a href="http://localhost:1313/experience/modifying-firmware-for-fun-and-profit/" class="button inline next">
+         [<span class="button__text">Hacking Firmware for Fun and Profit</span>] &gt;
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2026 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
