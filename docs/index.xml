@@ -9,7 +9,7 @@
     <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Classifying Small User Groups in the Reddit Comment Corpus with Simple Features</title>
+      <title>DeepLearning is expensive. Can we classify users using standard data science methods?</title>
       <link>http://localhost:1313/experience/reddit-small-user-groups-report/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/experience/reddit-small-user-groups-report/</guid>

@@ -1,9 +1,10 @@
 +++
 date = '2026-02-01'
 draft = true
-title = 'Classifying Small User Groups in the Reddit Comment Corpus with Simple Features'
+title = "DeepLearning is expensive. Can we classify users using standard data science methods?"
 description = """
-Converted from the original LaTeX report with all archived figures embedded.
+Before DL took over data science there was a vast library of alogrithms to takle all sorts of big data questions. Though DL will often give the best results, it's expensive in time and resources. This post explores the viability of more efficent methods on calssifying users within the *Reddit Comment Corpus*.
+[Read More](/experience/reddit-small-user-groups-report/)
 """
 +++
 

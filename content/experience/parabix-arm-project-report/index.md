@@ -3,7 +3,8 @@ date = '2026-02-01'
 draft = true
 title = 'Improving Parabix Performance on ARM Architecture'
 description = """
-Converted from the original LaTeX project report with inline figures and code snippets.
+Writing ARM intrinsics for an open-source, generalized parallel programming framework in C++.
+[Read More](/experience/parabix-arm-project-report/)
 """
 +++
 
