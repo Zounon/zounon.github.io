@@ -1,6 +1,6 @@
 +++
 date = '2026-02-01'
-draft = true
+draft = false
 title = "DeepLearning is expensive. Can we classify users using standard data science methods?"
 description = """
 Before DL took over data science there was a vast library of alogrithms to takle all sorts of big data questions. Though DL will often give the best results, it's expensive in time and resources. This post explores the viability of more efficent methods on calssifying users within the *Reddit Comment Corpus*.
@@ -153,4 +153,3 @@ From our analysis we conclude that more complex methods such as author comment a
 
 ![sentiment_fasttext_body_vs_post](sentiment_fasttext_body_vs_post.png)
 *sentiment_fasttext_body_vs_post*
-

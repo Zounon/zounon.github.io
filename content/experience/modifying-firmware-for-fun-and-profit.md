@@ -1,6 +1,6 @@
 +++
 date = '2026-02-01'
-draft = true
+draft = false
 title = 'Hacking Firmware for Fun and Profit'
 +++
 

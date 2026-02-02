@@ -1,6 +1,6 @@
 +++
 date = '2026-02-01'
-draft = true
+draft = false
 title = 'Improving Parabix Performance on ARM Architecture'
 description = """
 Writing ARM intrinsics for an open-source, generalized parallel programming framework in C++.
@@ -486,4 +486,3 @@ and unstable. It is located in the repository under the `sve` branch, or the `fi
 
 ![test both](test-both.png)
 *test both*
-

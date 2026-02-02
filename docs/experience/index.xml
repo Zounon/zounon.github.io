@@ -6,8 +6,29 @@
     <description>Recent content in Experiences on Matthew do Santos-Zounon</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mdsz.ca/experience/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DeepLearning is expensive. Can we classify users using standard data science methods?</title>
+      <link>https://mdsz.ca/experience/reddit-small-user-groups-report/</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://mdsz.ca/experience/reddit-small-user-groups-report/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;&#xA;&lt;p&gt;This report explores whether small groups of Reddit users can be accurately classified using only simple, non-aggregated features from the Reddit Comment Corpus. We engineer new features, including sentiment and NSFW scores, to improve classification. Using a Random Forest model, we test performance on several user groups but find precision and recall to be below 25%. Our results suggest that more complex methods are likely required to achieve high accuracy classification.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hacking Firmware for Fun and Profit</title>
+      <link>https://mdsz.ca/experience/modifying-firmware-for-fun-and-profit/</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://mdsz.ca/experience/modifying-firmware-for-fun-and-profit/</guid>
+      <description>&lt;p&gt;My first phone had been jailbroken, ran multiple OS&amp;rsquo;s and had a few hardware swaps; that phone was defintely &lt;em&gt;mine&lt;/em&gt;.&#xA;My current phone came preinstalled with Facebook and YouTube and there is &lt;strong&gt;no way to uninstall them&lt;/strong&gt;.&#xA;And my laptop asks if I want to update now or try again tomorrow; that&amp;rsquo;s not &lt;em&gt;my&lt;/em&gt; laptop anymore - microsoft owns it.&#xA;If I can&amp;rsquo;t modify my computers, they are no longer mine. In this blog post I walk through how anyone can read and modify the firmware in their device to regain ownership.&#xA;&lt;a href=&#34;https://mdsz.ca/experience/modifying-firmware-for-fun-and-profit/&#34;&gt;Read More&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Improving Parabix Performance on ARM Architecture</title>
+      <link>https://mdsz.ca/experience/parabix-arm-project-report/</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://mdsz.ca/experience/parabix-arm-project-report/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;&#xA;&lt;p&gt;This report details our efforts to improve the performance of Parabix, a parallel bitstream framework,&#xA;on ARM architecture. Parabix leverages Single Instruction, Multiple Data (SIMD) parallel processing to achieve gigabit&#xA;per second text processing. While Parabix has proven its efficiency on x86 architecture, it did not achieve an&#xA;equivalent performance on ARM due to the need for architecture-specific optimization required to take full leverage&#xA;the different SIMD instruction set.&#xA;In this project we utilize ARM&amp;rsquo;s advanced SIMD extension, NEON, to improve the performance of Parabix&#xA;on ARM.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Dev Tooling &amp; Leadership @ Rivian|VW</title>
       <link>https://mdsz.ca/experience/rivian-mobile-release/</link>
